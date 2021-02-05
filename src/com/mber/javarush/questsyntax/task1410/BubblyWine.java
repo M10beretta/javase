@@ -1,0 +1,7 @@
+package com.mber.javarush.questsyntax.task1410;
+
+public class BubblyWine extends Wine{
+    public String getHolidayName(){
+        return "Новый Год";
+    }
+}
