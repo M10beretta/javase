@@ -1,4 +1,5 @@
 package com.mber.various.staticBlock;
+
 /*
 Создание статического блока в Java
 */

@@ -1,3 +1,2 @@
 # java
-My Java programming practice. Analysis of decisions.
-The tasks are taken from com.mber.various resources.
+My practice of programming in Java. Task solutions. Solutions analysis. Tasks are taken from various resources.

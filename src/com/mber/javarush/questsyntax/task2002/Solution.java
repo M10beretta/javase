@@ -11,7 +11,7 @@ public class Solution {
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
 //            File yourFile = File.createTempFile("your_file_name", null);
-            String yourFile = "D:\\Study\\programming\\practice\\src\\com.mber.javarush\\questsyntax\\task2002\\_1\\file.ser";
+            String yourFile = "D:\\Study\\programming\\practice\\src\\com.mber.javarush\\questsyntax\\task2002\\method1\\file.ser";
 
             OutputStream outputStream = new FileOutputStream(yourFile);
             InputStream inputStream = new FileInputStream(yourFile);

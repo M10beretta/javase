@@ -42,6 +42,4 @@ public class Task1 {
         } else
             System.out.println("Месяц введен не корректно");
     }
-
-
 }
