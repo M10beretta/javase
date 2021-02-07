@@ -1,4 +1,4 @@
-package com.mber.javarush.questsyntax.task2025_No;
+package com.mber.javarush.questsyntax.task2025;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /*
-Алгоритмы-числа
+Алгоритмы-числа fixme
 */
 
 public class Solution {

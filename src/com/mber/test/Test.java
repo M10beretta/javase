@@ -1,59 +1,19 @@
 package com.mber.test;
 
-import java.util.Arrays;
-import java.util.Formatter;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Test {
     public static void main(String[] args) throws InterruptedException {
-
-        System.out.println(new Cat("Tom", 2));
-        System.out.println(new Cat());
+        test();
 
     }
 
-    private static void test() throws InterruptedException {
-        String string = "которую будем делить на части";
-        StringTokenizer tokenizer = new StringTokenizer(string, " ");
-        while (tokenizer.hasMoreTokens()){
-            System.out.println(tokenizer.nextToken());
-
-        }
+    public static void test() {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        Collections.addAll(list, 0, -5, -7, -12, 5, 15);
+        list.removeIf( x-> x<0 );
+        list.forEach(System.out::print);
+        System.out.println();
     }
-
-    static class Cat {
-
-        String name;
-        int age = 1;
-
-        public Cat(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-
-        public Cat() {
-            this.name = "Leo";
-        }
-
-        @Override
-        public String toString() {
-            return  name + '\''  + age;
-        }
-    }
-
-    static class Car{
-        String model;
-        int age;
-        Car(String model, int age) {
-            this.model = model;
-            this.age = age;
-        }
-
-        public Car() {
-            this("Mazda", 2022);
-        }
-    }
-
 }
-
 

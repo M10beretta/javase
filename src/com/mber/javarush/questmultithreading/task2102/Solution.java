@@ -1,11 +1,11 @@
-package com.mber.javarush.questmultithreading.task2102_n;
+package com.mber.javarush.questmultithreading.task2102;
 
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
 /*
-Сравниваем модификаторы
+Сравниваем модификаторы todo
 */
 
 public class Solution {
@@ -19,7 +19,8 @@ public class Solution {
     }
 
     public static boolean isModifierSet(int allModifiers, int specificModifier) {
-        return false;
+        return (allModifiers & specificModifier) > 0;
+
     }
 
     private static Method getMainMethod() {
