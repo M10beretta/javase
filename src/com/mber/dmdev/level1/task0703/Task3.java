@@ -19,8 +19,6 @@ public class Task3 {
         };
 
         System.out.println(equalsDefault(values1, values2));
-
-
     }
 
     private static boolean equalsDefault(int[][] values1, int[][] values2) {
@@ -38,9 +36,7 @@ public class Task3 {
                 if (row1[j] != row2[j]) return false;
             }
         }
-
         return true;
     }
-
 }
 
