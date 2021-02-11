@@ -11,7 +11,7 @@ public class ReadObject {
         try {
             FileInputStream fis = new FileInputStream("D:\\Study\\" +
                     "programming\\practice\\src\\com.mber.alishev\\" +
-                    "beginner\\lesson46serializingAnArray\\method1\\people.bin");
+                    "beginner\\lesson46serializingAnArray\\method0\\people.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
 
             int personCount = ois.readInt();

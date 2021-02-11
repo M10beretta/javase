@@ -12,7 +12,7 @@ public class WriteObject {
         try {
             FileOutputStream fos = new FileOutputStream("D:\\Study" +
                     "\\programming\\practice\\src\\com.mber.alishev" +
-                    "\\beginner\\lesson46serializingAnArray\\method1\\people.bin");
+                    "\\beginner\\lesson46serializingAnArray\\method0\\people.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
             oos.writeInt(people.length);
