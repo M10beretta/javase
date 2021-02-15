@@ -1,4 +1,4 @@
-package com.mber.dmdev.level2.lesson18;
+package com.mber.dmdev.level2.lesson18.part1.list;
 
 public class ListRunner {
     public static void main(String[] args) {

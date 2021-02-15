@@ -5,9 +5,7 @@ public class TrainingGround {
         Hero warrior = new Warrior("Боромир", 15);
         Hero mage = new Mage("Гэндольф", 20);
         Hero archer = new Archer("Леголас", 10);
-
         Enemy enemy = new Enemy("Зомби", 100);
-
         attackEnemy(enemy, warrior, mage, archer);
 
     }

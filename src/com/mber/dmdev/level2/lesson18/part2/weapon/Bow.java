@@ -1,5 +1,6 @@
-package com.mber.dmdev.level2.lesson18.weapon;
+package com.mber.dmdev.level2.lesson18.part2.weapon;
 
+/*
 public class Bow implements RangeWeapon {
 
     @Override
@@ -7,3 +8,4 @@ public class Bow implements RangeWeapon {
         return 10;
     }
 }
+*/

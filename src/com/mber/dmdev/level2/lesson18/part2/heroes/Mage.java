@@ -1,6 +1,9 @@
-package com.mber.dmdev.level2.lesson15;
+package com.mber.dmdev.level2.lesson18.part2.heroes;
 
-public class Mage extends Hero {
+import com.mber.dmdev.level2.lesson18.part2.weapon.MagicWeapon;
+
+public class Mage<T extends MagicWeapon> extends Hero<T> {
+
     public Mage(String name, int damage) {
         super(name, damage);
     }
@@ -9,10 +12,5 @@ public class Mage extends Hero {
     public void attackEnemy(Enemy enemy) {
         System.out.println(getName() + " сотворил заклинание на " + enemy.getName());
         enemy.takeDamage(getDamage());
-    }
-
-    @Override
-    public String getName() {
-        return super.getName();
     }
 }
