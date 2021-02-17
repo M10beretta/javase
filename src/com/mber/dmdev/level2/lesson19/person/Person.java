@@ -1,5 +1,6 @@
 package com.mber.dmdev.level2.lesson19.person;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Person implements Comparable<Person>{
@@ -49,6 +50,15 @@ public class Person implements Comparable<Person>{
 
     @Override
     public int compareTo(Person o) {
-        return this.id-o.id;
+        return Integer.compare(id , o.id);
+    }
+
+
+    public static class FirstNameComparator implements Comparator<Person> {
+
+        @Override
+        public int compare(Person o1, Person o2) {
+            return o1.getFirstName().compareTo(o2.getFirstName());
+        }
     }
 }

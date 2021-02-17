@@ -23,7 +23,8 @@ public class IteratorExample {
         }
         
         Iterator<Integer> iterator = list.iterator();
-        while (iterator.hasNext()){ Integer next = iterator.next();
+        while (iterator.hasNext()){
+            Integer next = iterator.next();
             System.out.println(next);
         }
 
