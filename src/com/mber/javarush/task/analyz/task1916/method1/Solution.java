@@ -4,6 +4,10 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+Отслеживаем изменения
+*/
+
 public class Solution {
     public static List<LineItem> lines = new ArrayList<LineItem>();
 
