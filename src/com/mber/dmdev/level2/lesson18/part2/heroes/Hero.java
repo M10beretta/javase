@@ -4,13 +4,12 @@ import com.mber.dmdev.level2.lesson18.part2.weapon.Weapon;
 
 public abstract class Hero <T extends Weapon>{
 
-    private String name;
-    private int damage;
-    private T weapon;
+    private final String name;
+    private final T weapon;
 
-    public Hero(String name, int damage) {
+    public Hero(String name, T weapon) {
         this.name = name;
-        this.damage = damage;
+        this.weapon = weapon;
     }
 
     public abstract void attackEnemy(Enemy enemy);
@@ -19,16 +18,8 @@ public abstract class Hero <T extends Weapon>{
         return name;
     }
 
-    public int getDamage() {
-        return damage;
-    }
-
     public T getWeapon() {
         return weapon;
-    }
-
-    public void setWeapon(T weapon) {
-        this.weapon = weapon;
     }
 }
 

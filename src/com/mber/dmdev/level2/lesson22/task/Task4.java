@@ -12,13 +12,13 @@ import java.nio.file.Path;
  */
 public class Task4 {
     public static void main(String[] args) throws IOException {
-        Path path = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "task", "Task3.java");
+        Path path = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "counter", "Task3.java");
 
         String stringValue = Files.readString(path);
         String result = stringValue.replace("public", "private");
 
-        Path directoryPath = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "task", "edited");
-        Path resultPath = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "task", "edited", "Task.txt");
+        Path directoryPath = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "counter", "edited");
+        Path resultPath = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "counter", "edited", "Task.txt");
         Files.createDirectories(directoryPath);
         Files.writeString(resultPath, result);
     }

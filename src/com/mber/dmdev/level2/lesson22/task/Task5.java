@@ -15,8 +15,8 @@ import static java.nio.file.StandardOpenOption.APPEND;
  */
 public class Task5 {
     public static void main(String[] args) {
-        Path path = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "task", "Task4.java");
-        Path result = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "task", "edited", "Task.txt");
+        Path path = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "counter", "Task4.java");
+        Path result = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "counter", "edited", "Task.txt");
         try (Stream<String> lines = Files.lines(path);
              BufferedWriter bufferedWriter = Files.newBufferedWriter(result, APPEND)) {
             lines.map(StringBuilder::new)

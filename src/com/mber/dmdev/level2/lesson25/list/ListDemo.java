@@ -9,8 +9,6 @@ public class ListDemo {
         for (int i = 0; i < 300; i++) {
             fillList();
         }
-
-
     }
 
     private static void fillList() throws InterruptedException {
