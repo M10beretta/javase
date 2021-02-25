@@ -1,23 +1,14 @@
 package com.mber.javarush.task.task21.task2109;
 
 /*
-Запретить клонирование fixme
+Запретить клонирование
 
-Разреши клонировать класс А
-Запрети клонировать класс B
-Разреши клонировать класс C
-Не забудь о методах equals и hashCode!
-
-
-Требования:
-1. Класс A должен поддерживать интерфейс Cloneable.
-2. Класс B должен быть потомком класса A.
-3. При объявлении класса B не должно быть явно указано implements Cloneable.
-4. Метод clone в классе B должен быть переопределен таким образом,
-чтобы при попытке клонирования объекта класса B возникало исключение CloneNotSupportedException.
-5. Класс C должен быть потомком класса B.
-6. Клонирование объектов класса C должно завершаться успешно.
-*/
+/* Запрет клонирования
+Разрешите клонировать класс А
+Запретите клонировать класс B
+Разрешите клонировать класс C
+Метод main не участвует в тестировании.
+ */
 
 public class Solution {
     public static class A implements Cloneable {
@@ -29,14 +20,17 @@ public class Solution {
             this.j = j;
         }
 
-
-
         public int getI() {
             return i;
         }
 
         public int getJ() {
             return j;
+        }
+
+        @Override
+        protected Object clone() throws CloneNotSupportedException {
+            return super.clone();
         }
     }
 
@@ -51,15 +45,26 @@ public class Solution {
         public String getName() {
             return name;
         }
+
+
+        @Override
+        protected Object clone() throws CloneNotSupportedException {
+            throw new CloneNotSupportedException();
+        }
     }
 
     public static class C extends B {
         public C(int i, int j, String name) {
             super(i, j, name);
         }
-    }
 
-    public static void main(String[] args) {
+        @Override
+        protected Object clone() throws CloneNotSupportedException {
+            return new C(getI(), getJ(), getName());
+        }
 
+        public static void main(String[] args) {
+
+        }
     }
 }

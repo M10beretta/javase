@@ -4,22 +4,16 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
 /*
-Сравниваем модификаторы todo
+Сравниваем модификаторы
 
-Реализовать логику метода isAllModifiersContainSpecificModifier, который проверяет, содержит ли переданный параметр
-allModifiers значение конкретного модификатора specificModifier.
+Реализовать логику метода isModifierSet, который проверяет, содержит ли переданный
+параметр allModifiers значение конкретного модификатора specificModifier.
+P.S. Перед выполнением задания ознакомься с классом Modifier и реализацией
+методов isPublic, isStatic и т.п.
 
-P.S. Перед выполнением задания ознакомься с классом Modifier и реализацией методов isPublic, isStatic и т.п.
-
-Требования:
-1. Метод isAllModifiersContainSpecificModifier должен быть статическим.
-2. Метод isAllModifiersContainSpecificModifier должен возвращать значение типа boolean.
-3. Метод isAllModifiersContainSpecificModifier должен принимать два параметра типа int.
-4. Метод isAllModifiersContainSpecificModifier должен возвращать корректное значение в соответствии с условием
-задачи(true, если заданный модификатор присутствует в allModifiers, иначе false).
 */
 
-public class Solution {
+public class Solution { // 0001
     public static void main(String[] args) {
         int classModifiers = Solution.class.getModifiers();
         System.out.println(isModifierSet(classModifiers, Modifier.PUBLIC));   //true
@@ -27,10 +21,11 @@ public class Solution {
 
         int methodModifiers = getMainMethod().getModifiers();
         System.out.println(isModifierSet(methodModifiers, Modifier.STATIC));      //true
+        System.out.println(isModifierSet(methodModifiers, Modifier.PUBLIC));      //true
     }
 
     public static boolean isModifierSet(int allModifiers, int specificModifier) {
-        return (allModifiers & specificModifier) > 0;
+        return (allModifiers & specificModifier) != 0;
 
     }
 
@@ -43,3 +38,4 @@ public class Solution {
         return null;
     }
 }
+

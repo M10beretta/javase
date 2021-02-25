@@ -18,7 +18,7 @@ public class Task4 {
         String result = stringValue.replace("public", "private");
 
         Path directoryPath = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "counter", "edited");
-        Path resultPath = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "counter", "edited", "Task.txt");
+        Path resultPath = Path.of("src", "com", "mber", "dmdev", "level2", "lesson22", "counter", "edited", "task.txt");
         Files.createDirectories(directoryPath);
         Files.writeString(resultPath, result);
     }
