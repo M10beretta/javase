@@ -34,11 +34,6 @@ public class ReplacingSubstrings {
     }
 
 
-
-
-
-
-
     private static void extracted1() {
         String phoneNumber = "gsdh+375 (29) 898-12-13 hdhhfdh +375 (44) 898-12-13" +
                 "f34t2g434 aaj thrtj ykt543777 +375 (25) 342-12-33 ahh jajaj" +

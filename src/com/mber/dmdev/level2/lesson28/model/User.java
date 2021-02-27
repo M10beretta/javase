@@ -2,10 +2,20 @@ package com.mber.dmdev.level2.lesson28.model;
 
 import java.io.Serializable;
 
+
 public class User extends Person implements Serializable, Comparable {
     private String name;
+    //    @MinAge(age = 21)
+    @MinAge(21)
+    private int age;
 
-    public User(long id, String name) {
+    public User(Long id, String name, int age) {
+        super(id);
+        this.name = name;
+        this.age = age;
+    }
+
+    public User(Long id, String name) {
         super(id);
         this.name = name;
     }
@@ -27,6 +37,6 @@ public class User extends Person implements Serializable, Comparable {
     public String toString() {
         return "User{" +
                 "name='" + name + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }
