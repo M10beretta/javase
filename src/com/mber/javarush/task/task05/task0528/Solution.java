@@ -18,7 +18,5 @@ public class Solution {
         /* современный вариант */
         var formatter = DateTimeFormatter.ofPattern("dd MM yyyy");
         System.out.println(formatter.format(LocalDate.now()));
-
     }
-
 }
