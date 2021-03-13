@@ -21,10 +21,10 @@ import java.util.stream.IntStream;
 
 public class Solution {
     public static void main(String[] args) {
-//        Instant instant = Instant.now();
+        Instant instant = Instant.now();
         System.out.println(new Solution().solution(10));   // 4999800      998600      19000300    + кэшируемость
         System.out.println(new Solution().solution2(10));  // 12001000     21002000    37002500
-//        System.out.println(Duration.between(instant,Instant.now()).getNano());
+        System.out.println(Duration.between(instant,Instant.now()).getNano());
     }
 
     public int solution(int number) {
@@ -40,6 +40,5 @@ public class Solution {
                 .filter(n -> (n % 3 == 0) || (n % 5 == 0))
                 .sum();
     }
-
 }
 
