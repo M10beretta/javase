@@ -13,9 +13,6 @@ public class Solution {
     public final static ArrayList<Cat> CATS = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
-//        extracted1();
-//        extracted2();
-
         printList();
     }
 

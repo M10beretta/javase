@@ -10,8 +10,6 @@ import java.util.ArrayList;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-//        extracted1();
-//        extracted2();
     }
 
     private static void extracted2() throws Exception {

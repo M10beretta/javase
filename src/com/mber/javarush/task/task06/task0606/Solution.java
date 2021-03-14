@@ -14,8 +14,7 @@ public class Solution {
     public static int odd;
 
     public static void main(String[] args) throws IOException {
-//        extracted1();
-//        extracted2();
+
     }
 
     private static void extracted1() throws IOException {

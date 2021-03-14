@@ -10,8 +10,6 @@ import java.io.InputStreamReader;
 
 public class Solution1 {
     public static void main(String[] args) throws Exception {
-//        extracted1();
-//        extracted2();
 
     }
 
