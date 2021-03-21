@@ -8,11 +8,9 @@ public class Example {
 
     public Example(List<Integer> list) {
         this.list = list;
-//        this.list = List.copyOf(list);
     }
 
     public List<Integer> getList() {
         return new ArrayList<>(list);
-//        return list;
     }
 }

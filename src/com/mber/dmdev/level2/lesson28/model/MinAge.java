@@ -9,9 +9,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface MinAge {
 
-    /*
-            int age () default 18;
-            int value() default 18;
-    */
     int value();
 }

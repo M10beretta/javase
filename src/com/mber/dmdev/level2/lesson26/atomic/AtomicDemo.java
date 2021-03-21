@@ -1,7 +1,5 @@
 package com.mber.dmdev.level2.lesson26.atomic;
 
-import sun.misc.Unsafe;
-
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class AtomicDemo {
@@ -12,9 +10,6 @@ public class AtomicDemo {
 
         int newValue = atomicInteger.addAndGet(20);
         System.out.println(newValue);
-
-
-//        Unsafe unsafe = Unsafe.getUnsafe();
     }
 }
 

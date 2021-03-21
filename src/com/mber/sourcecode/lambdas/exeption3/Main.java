@@ -5,7 +5,7 @@ public class Main {
         //  если пока не знаем какой тип возвращаемого значения будем использовать
         //  обобщенные функциональные итерфейсы
 
-        Operation<Integer> addition = Integer::sum; // or (value1, value2) -> value1 + value2;
+        Operation<Integer> addition = Integer::sum;
         System.out.println(addition.getResult(2,2));
 
         Operation<String> concatenation = (value1, value2) -> value1 + value2;

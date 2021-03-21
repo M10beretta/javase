@@ -15,12 +15,12 @@ public class Main {
 
         //  пример нетерминального лямбда выражения - которое возвращает значение
 
-        Operation lambda = Double::sum; // or (value1, value2) -> value1 + value2;
+        Operation lambda = Double::sum;
         System.out.println(lambda.getResult(3.0, 3.0));
 
         //  пример терминального лямбда выражения
 
-        Printer printer = System.out::println; // or string -> System.out.println(string);
+        Printer printer = System.out::println;
 
         printer.println("Hello World!");
 

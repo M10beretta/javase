@@ -6,19 +6,6 @@ import java.util.regex.Pattern;
 public class PatternFindExample {
     public static void main(String[] args) {
 
-//        String regex = "(\\+375)? ?(\\(29|33|44|25\\)) ?\\d{3}-\\d{2}-\\d{2}";
-//        extractedGroup(regex, 1);
-//
-//        String regex = "(\\+375)? ?\\((29|33|44|25)\\) ?\\d{3}-\\d{2}-\\d{2}";
-//        extractedGroup(regex, 2);
-
-//        String regex = "(\\+375)? ?\\((29|33|44|25)\\) ?\\d{3}-\\d{2}-\\2";
-//        extractedGroup(regex, 2);
-//        extractedGroup(regex);
-
-//        String regex = "(\\+375)? ?\\((?<code>29|33|44|25)\\) ?\\d{3}-\\d{2}-\\2";
-//        extractedGroup(regex3, "code");
-
         String regex = "(?:\\+375)? ?\\((?<code>29|33|44|25)\\) ?\\d{3}-\\d{2}-\\1";
         extractedGroup(regex);
     }

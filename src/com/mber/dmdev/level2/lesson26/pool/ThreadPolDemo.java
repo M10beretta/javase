@@ -24,17 +24,11 @@ public class ThreadPolDemo {
         });
         System.out.println("Result " + future.get());
         threadPool.shutdown();
-//        threadPool.awaitTermination(10000L, TimeUnit.SECONDS);
         System.out.println("main end");
     }
 
     private static void extracted3() {
         ScheduledExecutorService threadPool = Executors.newScheduledThreadPool(4);
-/*
-        threadPool.schedule(() -> System.out.println("OK"), 3L, TimeUnit.SECONDS);
-        threadPool.shutdown();
-        threadPool.awaitTermination(1L,TimeUnit.HOURS);
-*/
         threadPool.scheduleAtFixedRate(() -> System.out.println("OK"), 2L, 4L, TimeUnit.SECONDS);
     }
 }

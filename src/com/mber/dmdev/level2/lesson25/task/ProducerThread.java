@@ -1,6 +1,5 @@
 package com.mber.dmdev.level2.lesson25.task;
 
-import java.util.List;
 import java.util.Queue;
 
 public class ProducerThread implements Runnable {
@@ -25,7 +24,6 @@ public class ProducerThread implements Runnable {
                     System.out.println("producer does nothing");
                 }
 
-//                list.notifyAll();
                 try {
                     int randomWaitValue = 20;
                     System.out.println("producer waits: " + randomWaitValue + " ms");

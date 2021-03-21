@@ -1,6 +1,5 @@
 package com.mber.dmdev.level2.lesson25.task;
 
-import java.util.List;
 import java.util.Queue;
 
 public class ConsumerThread implements Runnable {
@@ -25,7 +24,6 @@ public class ConsumerThread implements Runnable {
                 try {
                     int randomWaitValue = 80;
                     System.out.println("consumer waits: " + randomWaitValue + " ms");
-//                    list.notifyAll();
                     list.wait(randomWaitValue);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

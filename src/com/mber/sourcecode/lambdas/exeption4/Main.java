@@ -13,11 +13,11 @@ public class Main {
         System.out.println(isZero.test(0));
 
 
-        Consumer<String> printer = System.out::println; // or string -> System.out.println(string);
+        Consumer<String> printer = System.out::println;
         printer.accept("Hello World!");
 
 
-        Function<Integer, Double> converter = Double::valueOf; // or value -> Double.valueOf(value);
+        Function<Integer, Double> converter = Double::valueOf;
         System.out.println(converter.apply(1));
 
 
