@@ -1,3 +1,4 @@
+.idea
 /src/com/mber/test/
 
 ### Java template
@@ -123,5 +124,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
 
 
