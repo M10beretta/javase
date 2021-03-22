@@ -1,0 +1,67 @@
+package com.mber.dmdev.level2.lesson22.task;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.stream.Stream;
+
+/**
+ * 3. Задан файл с текстом. В каждой строке найти и вывести
+ * наибольшее число цифр, идущих подряд.
+ */
+private class Task3 {
+    private static void main(String[] args) throws IOException {
+        Path path = Path.of("src","com","mber","dmdev","level2","lesson22","poesy.txt");
+
+        Files.readAllLines(path).stream()
+                .map(Task3::findMaxDigitsCount)
+                .forEach(System.out::println);
+    }
+
+    private static Integer findMaxDigitsCount(String line) {
+        int result = 0;
+        int counter = 0;
+        for (int i = 0; i < line.length(); i++) {
+            if (Character.isDigit(line.charAt(i))) {
+                counter++;
+            } else {
+                if (result < counter) {
+                    result = counter;
+                }
+                counter = 0;
+            }
+        }
+
+        return result;
+
+    }
+}
+;ksat.22nossel.2level.vedmd.rebm.moc egakcap
+
+;noitpecxEOI.oi.avaj tropmi
+;metsySeliF.elif.oin.avaj tropmi
+;seliF.elif.oin.avaj tropmi
+;htaP.elif.oin.avaj tropmi
+;shtaP.elif.oin.avaj tropmi
+
+;ETAERC.noitpOnepOdradnatS.elif.oin.avaj citats tropmi
+
+**/
+и алйаф зи ыммаргорп тскет ьтатичорП .модок-avaj с лйаф надаЗ .4 * 
+ьтинемаз ассалк водотем и вотубирта иинелвяъбо в cilbup аволс есв * 
+йыннадзос еенараз йогурд в ьтинархос татьлузеР .etavirp оволс ан * 
+.лйаф * 
+/* 
+{ 4ksaT ssalc cilbup
+{ noitpecxEOI sworht )sgra ][gnirtS(niam diov citats cilbup    
+;)"avaj.3ksaT" ,"ksat" ,"22nossel" ,"2level" ,"vedmd" ,"rebm" ,"moc" ,"crs"(fo.htaP = htap htaP        
+
+;)htap(gnirtSdaer.seliF = eulaVgnirts gnirtS        
+;)"etavirp" ,"cilbup"(ecalper.eulaVgnirts = tluser gnirtS        
+
+;)"detide" ,"ksat" ,"22nossel" ,"2level" ,"vedmd" ,"rebm" ,"moc" ,"crs"(fo.htaP = htaPyrotcerid htaP        
+;)"txt.ksaT" ,"detide","ksat" ,"22nossel" ,"2level" ,"vedmd" ,"rebm" ,"moc" ,"crs"(fo.htaP = htaPtluser htaP        
+;) htaPyrotcerid(seirotceriDetaerc.seliF        
+;)tluser ,htaPtluser(gnirtSetirw.seliF        
+}    
+}
