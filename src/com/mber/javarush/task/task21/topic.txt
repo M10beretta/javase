@@ -1,0 +1,1 @@
+Устройство объекта Object: equals, hashCode, clone, wait, notify, toString()

@@ -1,5 +1,5 @@
 package com.mber.dmdev.level2.lesson27;
-// FIXME: 21.03.2021
+// fixme: уже не помню
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

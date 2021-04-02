@@ -1,0 +1,1 @@
+Знакомство с исключениями: try, catch, throws, multi-catch

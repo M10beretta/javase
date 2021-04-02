@@ -10,51 +10,31 @@ public class Solution {
         HenFactory.getHen(Country.UKRAINE);
         HenFactory.getHen(Country.MOLDOVA);
         HenFactory.getHen(Country.BELARUS);
-
     }
 
     static class HenFactory {
 
-        static Hen getHen(String country) {
-            Hen hen = null;
-/*
-            if (country.equals(Country.RUSSIA)) {
-                hen = new RussianHen();
-                System.out.println(hen.getDescription());
-            }
-            if (country.equals(Country.UKRAINE)) {
-                hen = new UkrainianHen();
-                System.out.println(hen.getDescription());
-            }
-            if (country.equals(Country.MOLDOVA)) {
-                hen = new MoldovanHen();
-                System.out.println(hen.getDescription());
-            }
-            if (country.equals(Country.BELARUS)) {
-                hen = new BelarusianHen();
-                System.out.println(hen.getDescription());
-            }
-*/
+        static void getHen(String country) {
+            Hen hen;
 
             switch (country) {
-                case Country.RUSSIA:
+                case Country.RUSSIA -> {
                     hen = new RussianHen();
                     System.out.println(hen.getDescription());
-                    break;
-                case Country.UKRAINE:
+                }
+                case Country.UKRAINE -> {
                     hen = new UkrainianHen();
                     System.out.println(hen.getDescription());
-                    break;
-                case Country.MOLDOVA:
+                }
+                case Country.MOLDOVA -> {
                     hen = new MoldovanHen();
                     System.out.println(hen.getDescription());
-                    break;
-                case Country.BELARUS:
+                }
+                case Country.BELARUS -> {
                     hen = new BelarusianHen();
                     System.out.println(hen.getDescription());
-                    break;
+                }
             }
-            return hen;
         }
     }
 }
