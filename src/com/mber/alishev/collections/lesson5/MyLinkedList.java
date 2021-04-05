@@ -5,10 +5,10 @@ import java.util.Arrays;
 /*
 односвязный непараметризованный список
  */
+
 public class MyLinkedList {
     private Node head;
     private int size;
-
 
     public void add(int value) {
 
@@ -38,7 +38,6 @@ public class MyLinkedList {
         return Arrays.toString(result);
     }
 
-
     public int get(int index) {
         int currentIndex = 0;
         Node temp = head;
@@ -66,8 +65,9 @@ public class MyLinkedList {
         int currentIndex = 0;
         Node temp = head;
         while (temp != null) {
-
+            // находимся на ноде перед целевым
             if (currentIndex == index - 1) {
+                // перепрыгивем через целевой
                 temp.setNext(temp.getNext().getNext());
                 size--;
                 return;
