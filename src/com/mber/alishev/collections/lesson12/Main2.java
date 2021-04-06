@@ -7,7 +7,7 @@ import java.util.List;
 
 // интерфес Comparator
 
-public class SortedTest2 {
+public class Main2 {
     public static void main(String[] args) {
         List<Person> people = new ArrayList<>();
         people.add(new Person(3,"Mike"));

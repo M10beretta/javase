@@ -2,9 +2,7 @@ package com.mber.alishev.collections.lesson5;
 
 import java.util.Arrays;
 
-/*
-односвязный непараметризованный список
- */
+// односвязный непараметризованный список
 
 public class MyLinkedList {
     private Node head;
