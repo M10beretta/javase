@@ -1,7 +1,6 @@
 package com.mber.alishev.multithreading.lesson17;
 
-// создание потока
-
+// создание потоков
 
 import static com.mber.alishev.multithreading.lesson17.Main.action;
 

@@ -1,8 +1,6 @@
-package com.mber.codewars.kata514b92a657cdc65150000006;
+package com.mber.codewars.kyu6.kata514b92a657cdc65150000006;
 
 /*
-https: //www.codewars.com/kata/514b92a657cdc65150000006
-6 kyu
 Multiples of 3 or 5
 
 If we list all the natural numbers below 10 that are multiples
@@ -22,12 +20,12 @@ import java.util.stream.IntStream;
 public class Solution {
     public static void main(String[] args) {
         Instant instant = Instant.now();
-        System.out.println(new Solution().solution(10));   // 4999800      998600      19000300    + кэшируемость
-        System.out.println(new Solution().solution2(10));  // 12001000     21002000    37002500
+        System.out.println(new Solution().solution1(10));   // 4999800   998600    19000300  + кэшируемость
+        System.out.println(new Solution().solution2(10));   // 12001000  21002000  37002500
         System.out.println(Duration.between(instant,Instant.now()).getNano());
     }
 
-    public int solution(int number) {
+    public int solution1(int number) {
         int sum = 0;
         for (int i = 3; i < number; i++) {
             if (i % 3 == 0 || i % 5 == 0) sum += i;
