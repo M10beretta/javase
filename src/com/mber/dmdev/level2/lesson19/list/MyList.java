@@ -1,13 +1,12 @@
 package com.mber.dmdev.level2.lesson19.list;
 
 import java.util.Iterator;
-import java.util.ListIterator;
 
-public class List<T> implements Iterable<T> {
+public class MyList<T> implements Iterable<T> {
     private T[] objects;
     private int size;
 
-    public List(int initialsize) {
+    public MyList(int initialsize) {
         this.objects = (T[]) new Object[initialsize];
     }
 
