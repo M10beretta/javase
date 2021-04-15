@@ -1,18 +1,22 @@
 package com.mber.other.algorithms;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Sorting {
 
     public static void main(String[] args) {
-        int[] ints = {4, 2, 3, 4, 7, 43, 3, 6, 7, 324, 737, 8, 58, 3458};
-        System.out.println(Arrays.toString(bubbleSorting(ints)));
+        int[] ints = Arrays.stream(new int[1000])
+                .map(v -> v = new Random().nextInt(100))
+                .toArray();
 
+        bubbleSorting(ints);
     }
 
-    private static int[] bubbleSorting(int[] ints) {
-        int length = ints.length;
+    private static void bubbleSorting(int[] ints) {
+        long start = System.currentTimeMillis();
 
+        int length = ints.length;
         for (int i = 0; i < length; i++) {
             for (int j = i; j < length; j++) {
                 if (ints[i] > ints[j]) {
@@ -22,6 +26,7 @@ public class Sorting {
                 }
             }
         }
-        return ints;
+
+        System.out.println(System.currentTimeMillis() - start + " ms bubbleSorting");
     }
 }
