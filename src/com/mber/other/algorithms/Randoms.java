@@ -26,5 +26,4 @@ public class Randoms {
     private static void add3(TreeSet<Integer> set) {
         for (int i = 0; i < 100; i++) set.add((new Random().nextInt(6) + 1));
     }
-
 }
