@@ -20,7 +20,7 @@ public class Solution {
             while (bufferedFileReader.ready()) builder.append((char) bufferedFileReader.read());
         }
 
-        String replace = builder.toString().replaceAll("[А-Яа-яA-Za-z]+\\d*|\\d[А-Яа-яA-Za-z]", " ").replaceAll("\\s+", " ");
+        String replace = builder.toString().replaceAll("[А-Яа-яA-Za-z]+\\d*|\\d+[А-Яа-яA-Za-z]", " ").replaceAll("\\s+", " ");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName2))) {
             writer.write(replace);
         }
