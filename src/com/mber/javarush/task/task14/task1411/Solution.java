@@ -20,20 +20,10 @@ public class Solution {
             if(!u) break;
 
             switch (key) {
-                case "user":
-                    person = new Person.User();
-                    break;
-                case "loser":
-                    person = new Person.Loser();
-                    break;
-                case "coder":
-                    person = new Person.Coder();
-                    break;
-                case "proger":
-                    person = new Person.Proger();
-                    break;
-
-
+                case "user" -> person = new Person.User();
+                case "loser" -> person = new Person.Loser();
+                case "coder" -> person = new Person.Coder();
+                case "proger" -> person = new Person.Proger();
             }
             doWork(person); //вызываем doWork
         }
