@@ -1,13 +1,7 @@
-package com.mber.patterns.singleton.type3;
+package com.mber.alishev.patterns.singleton;
 
-/**
- * @author Neil Alishev
- *
- * Дополнительный материал к 7 уроку в курсе про Spring Framework
- *
- * Пример класса, реализующего паттерн Singleton (англ. Одиночка)
- * Можно будет использовать только один объект класса Lesson7Singleton
- */
+// Neil Alishev
+
 public class Singleton {
     // В этой статической(!) переменной будет хранится единственный объект класса Singleton
     private static Singleton instance;
