@@ -1,4 +1,4 @@
-package com.mber.sourcecode.lambdas.exeption4;
+package com.mber.sourcecode.lambdas.lesson2.part2;
 
 import java.util.Scanner;
 import java.util.function.*;
@@ -35,8 +35,6 @@ public class Main {
 
         BinaryOperator<Double> pow = Math::pow;
         System.out.println(pow.apply(2.0,5.0));
-
-
 
     }
 }

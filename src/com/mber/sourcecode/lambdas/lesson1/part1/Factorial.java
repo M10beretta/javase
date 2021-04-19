@@ -1,4 +1,4 @@
-package com.mber.sourcecode.lambdas.exeption1;
+package com.mber.sourcecode.lambdas.lesson1.part1;
 
 public interface Factorial {
 

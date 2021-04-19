@@ -1,4 +1,4 @@
-package com.mber.sourcecode.lambdas.exeption3;
+package com.mber.sourcecode.lambdas.lesson2.part1;
 
 public class Main {
     public static void main(String[] args) {
