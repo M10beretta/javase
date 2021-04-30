@@ -9,6 +9,7 @@ package com.mber.alishev.algorithms.lesson1;
 0  1  2  3  4  5  6  7  8  9  10 11 12  13
 0  1  1  2  3  5  8  13 21 34 55 89 144 233
 пользователь вводит n, мы выводим F */
+
 public class Fibonacci {
     public static void main(String[] args) {
         for (int i = 0; i < 10; i++) {
@@ -16,7 +17,6 @@ public class Fibonacci {
             System.out.println(fibNaive(30) + " time: " + (System.currentTimeMillis() - start));
         }
     }
-
 
     // n 30 наивный, медленный, очевидный
     // O(2^n)

@@ -1,11 +1,12 @@
 package com.mber.alishev.algorithms.lesson5;
+
 // Жадный алгоритм
 // Дан неупорядоченный список цифр от 0 до 9. Составить из этих цифр наибольшее число.
 
 import java.util.Arrays;
 import java.util.Collections;
 
-public class GreedyAlgorithm1 {
+public class GreedyAlgorithm {
     public static void main(String[] args) {
         int[] digits = {3, 1, 7, 9, 9, 5};
 

@@ -1,2 +1,0 @@
-Жадный алгоритм
-GreedyAlgorithm1
