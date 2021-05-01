@@ -15,31 +15,31 @@ public class BinarySearch {
     }
 
     public static int binarySearchCyclic(int[] arr, int value) {
-        int firstIndex = 0;
-        int lastIndex = arr.length - 1;
-        while (firstIndex <= lastIndex) {
-            int middleIndex = firstIndex + (lastIndex - firstIndex) / 2;
-            if (value < arr[middleIndex]) lastIndex = middleIndex - 1;
-            else if (value > arr[middleIndex]) firstIndex = middleIndex + 1;
-            else return middleIndex;
+        int first = 0;
+        int last = arr.length - 1;
+        while (first <= last) {
+            int middle = first + (last - first) / 2;
+            if (value < arr[middle]) last = middle - 1;
+            else if (value > arr[middle]) first = middle + 1;
+            else return middle;
         }
         return -1;
     }
 
     static int binarySearchRecursive(int[] arr, int value) {
-        int firstIndex = 0;
-        int lastIndex = arr.length - 1;
-        return binarySearchRecursive(arr, value, firstIndex, lastIndex);
+        int first = 0;
+        int last = arr.length - 1;
+        return binarySearchRecursive(arr, value, first, last);
     }
 
-    static int binarySearchRecursive(int[] arr, int value, int firstIndex, int lastIndex) {
-        if (lastIndex >= firstIndex && firstIndex < arr.length) {
-            int middleIndex = firstIndex + (lastIndex - firstIndex) / 2;
-            if (arr[middleIndex] == value)
-                return middleIndex;
-            if (arr[middleIndex] > value)
-                return binarySearchRecursive(arr, value, firstIndex, middleIndex - 1);
-            return binarySearchRecursive(arr, value, middleIndex + 1, lastIndex);
+    static int binarySearchRecursive(int[] arr, int value, int first, int last) {
+        if (last >= first && first < arr.length) {
+            int middle = first + (last - first) / 2;
+            if (arr[middle] == value)
+                return middle;
+            if (arr[middle] > value)
+                return binarySearchRecursive(arr, value, first, middle - 1);
+            return binarySearchRecursive(arr, value, middle + 1, last);
         }
         return -1;
     }
