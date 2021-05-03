@@ -13,7 +13,7 @@ interface Printable {
 
     void print();
 
-    private int generateRandom(){
-        return  RANDOM.nextInt();
+    private int generateRandom() {
+        return RANDOM.nextInt();
     }
 }

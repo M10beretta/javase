@@ -7,19 +7,18 @@ package com.mber.dmdev.level1.lesson7;
 public class Task2 {
 
     public static void main(String[] args) {
-        int[] values1 = new int[100];
-        fillArray1(values1);
-        Task1.printArray(values1);
+        int[] valuesFor = new int[100];
+        fillArrayFor(valuesFor);
+        Task1.printArray(valuesFor);
 
         System.out.println();
 
-        int[] values2 = new int[100];
-        fillArray2(values2);
-        Task1.printArrayForeach(values2);
+        int[] valuesDoWhile = new int[100];
+        fillArrayDoWhile(valuesDoWhile);
+        Task1.printArrayForeach(valuesDoWhile);
     }
 
-
-    private static void fillArray1(int[] values) {
+    private static void fillArrayFor(int[] values) {
         int currentIndex = 0;
         for (int currentValue = 1; currentIndex < values.length; currentValue++) {
             if (currentValue % 13 == 0 || currentValue % 17 == 0) {
@@ -29,7 +28,7 @@ public class Task2 {
         }
     }
 
-    public static void fillArray2(int[] values) {
+    public static void fillArrayDoWhile(int[] values) {
         int currentIndex = 0, currentValue = 0;
         do {
             currentValue++;

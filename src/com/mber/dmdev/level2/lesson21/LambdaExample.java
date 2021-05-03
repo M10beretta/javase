@@ -13,7 +13,5 @@ public class LambdaExample {
 
         Comparator<Integer> comparatorOutdated  = ((o1, o2) -> Integer.compare(o1,o2));
         Comparator<Integer> comparator = (Integer::compare);
-
     }
-
 }

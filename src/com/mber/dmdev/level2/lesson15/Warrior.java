@@ -9,7 +9,6 @@ public class Warrior extends Hero {
     public void attackEnemy(Enemy enemy) {
         System.out.println(getName() + " взмахнул мечом на " + enemy.getName());
         enemy.takeDamage(getDamage());
-
     }
 
     @Override

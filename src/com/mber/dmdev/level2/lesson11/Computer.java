@@ -1,7 +1,7 @@
 package com.mber.dmdev.level2.lesson11;
 
 
-public abstract class Computer implements Printable{
+public abstract class Computer implements Printable {
     private Ssd ssd;
     private Ram ram;
 
@@ -18,7 +18,7 @@ public abstract class Computer implements Printable{
     public abstract void load();
 
     @Override
-    public  void print(){
+    public void print() {
         System.out.println("ssd: " + ssd.getValue() + ", ram: " + ram.getValue());
     }
 

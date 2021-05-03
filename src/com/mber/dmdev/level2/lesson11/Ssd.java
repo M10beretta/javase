@@ -10,5 +10,4 @@ public class Ssd {
     public int getValue() {
         return value;
     }
-
 }

@@ -16,7 +16,6 @@ public class ExceptionExample {
             System.err.println("finally");
         }
         System.err.println("main end");
-        // code
     }
 
     public static int finallyTest() {

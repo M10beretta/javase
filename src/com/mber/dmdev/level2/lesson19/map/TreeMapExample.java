@@ -2,7 +2,6 @@ package com.mber.dmdev.level2.lesson19.map;
 
 import com.mber.dmdev.level2.lesson19.person.Person;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -22,7 +21,6 @@ public class TreeMapExample {
         map.putIfAbsent(tanya.getId(), tanya);
         map.putIfAbsent(lena.getId(), lena);
         map.putIfAbsent(katya.getId(), katya);
-
 
         for (Map.Entry<Integer, Person> entry : map.entrySet()) {
             System.out.println(entry.getKey() + "=" + entry.getValue());

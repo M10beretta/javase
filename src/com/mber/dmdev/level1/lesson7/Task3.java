@@ -31,7 +31,6 @@ public class Task3 {
             int[] row2 = values2[i];
             if (row1.length != row2.length) return false;
 
-
             for (int j = 0; j < row1.length; j++) {
                 if (row1[j] != row2[j]) return false;
             }

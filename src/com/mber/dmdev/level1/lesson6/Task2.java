@@ -10,7 +10,6 @@ public class Task2 {
         System.out.println(result1);
         int result2 = sum(value);
         System.out.println(result2);
-
     }
 
     public static int sum(int value) {
@@ -18,17 +17,16 @@ public class Task2 {
         int currentValue = value;
         while (currentValue != 0) {
             result += currentValue % 10;
-            currentValue/=10;
+            currentValue /= 10;
         }
         return result;
     }
 
     public static int sumFor(int value) {
         int result = 0;
-        for (int currentValue = value; currentValue != 0; currentValue/=10) {
+        for (int currentValue = value; currentValue != 0; currentValue /= 10) {
             result += currentValue % 10;
         }
-
         return result;
     }
 }

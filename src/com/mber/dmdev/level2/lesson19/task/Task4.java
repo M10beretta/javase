@@ -26,8 +26,6 @@ public class Task4 {
                 6, 1
         );
 
-        // 8x^6 + 9x^5 + 6x^3 + 3x^1 + 10
-
         Map<Integer, Integer> sum = sum(polynomial1, polynomial2);
         System.out.println(convertToString(sum));
     }
@@ -51,30 +49,9 @@ public class Task4 {
                                             Map<Integer, Integer> polynomial2) {
         Map<Integer, Integer> polynomialResult = new HashMap<>(polynomial1);
         for (Map.Entry<Integer, Integer> entry : polynomial2.entrySet()) {
-//            Integer value = polynomialResult.getOrDefault(entry.getKey(), 0);
-//            polynomialResult.put(entry.getKey(), value + entry.getValue());
 
             polynomialResult.merge(entry.getKey(), entry.getValue(), Integer::sum);
         }
         return polynomialResult;
     }
 }
-
-/*
-вариант 1
-создаем копию мап 1
-перебираем мап 2 {
-получаем значение из копии мап 1 по ключу из мап 2,  либо 0 если в мап 1 такого ключа нет
-(полученое значени из копии мап 1 либо 0 + значение по этому же ключу из мап 2 ) добавляем с перезаписью в копию мап 1
-}
-возвращаем копию мап 1
-_______________
-
-вариант 2
-создаем копию мап 1
-перебираем мап 2 {
-выполняем слияние с мап 1 (ключ элемента мап 2, значение элемента мап 2, занчение мап 2 + значение мап 1)
-}
-
-
- */

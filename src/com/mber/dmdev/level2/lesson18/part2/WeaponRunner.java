@@ -5,7 +5,6 @@ import com.mber.dmdev.level2.lesson18.part2.weapon.*;
 
 public class WeaponRunner {
     public static void main(String[] args) {
-
         Hero<Bow> archer = new Archer<Bow>("Леголас" , new Bow());
         Hero<Sword> warrior = new Warrior<>("Боромир", new Sword());
         Hero<Wand> mage = new Mage<>("Гэндольф" , new Wand());

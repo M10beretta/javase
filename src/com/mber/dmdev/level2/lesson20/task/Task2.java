@@ -11,7 +11,7 @@ public class Task2 {
             for (int i = 0; i <= values.length; i++) {
                 System.out.println(values[i]);
             }
-        } catch (ArrayIndexOutOfBoundsException exception){
+        } catch (ArrayIndexOutOfBoundsException exception) {
             System.err.println("словили");
             exception.printStackTrace();
         }

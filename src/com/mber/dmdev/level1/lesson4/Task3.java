@@ -8,7 +8,6 @@ public class Task3 {
     public static void main(String[] args) {
         int rubles = 15;
         toCorrectTheCase(rubles);
-
     }
 
     public static void toCorrectTheCase(int rubles) {
@@ -18,6 +17,3 @@ public class Task3 {
     }
 }
 
-/* рубль 1, !11, 21,
-рубля 2, 3, 4, 22, 23, 24
-рублей 5-20 */

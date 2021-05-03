@@ -40,8 +40,8 @@ public class CarRunner {
         String fieldValues = Arrays.stream(fields)
                 .filter(field -> field.isAnnotationPresent(Colum.class))
                 .sorted(Comparator.comparing(Field::getName))
-                .map(field -> getMethodName(car,field))
-                .map(method-> {
+                .map(field -> getMethodName(car, field))
+                .map(method -> {
                     try {
                         return method.invoke(car);
                     } catch (IllegalAccessException | InvocationTargetException e) {
@@ -55,7 +55,7 @@ public class CarRunner {
 
     }
 
-    private static Method getMethodName(Car car, Field field)  {
+    private static Method getMethodName(Car car, Field field) {
         try {
             String name = field.getName();
             return car.getClass().getMethod("get" + name.substring(0, 1).toUpperCase() + name.substring(1));

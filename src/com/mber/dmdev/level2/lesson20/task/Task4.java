@@ -11,7 +11,7 @@ import com.mber.dmdev.level2.lesson20.exception.MberException;
  */
 public class Task4 {
     public static void main(String[] args) {
-//        unsafe1();
+        unsafe1();
         unsafe2();
     }
 

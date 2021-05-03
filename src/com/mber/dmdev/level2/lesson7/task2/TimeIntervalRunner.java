@@ -9,6 +9,5 @@ public class TimeIntervalRunner {
         timeInterval2.print();
 
         timeInterval1.sum(timeInterval2).print();
-
     }
 }

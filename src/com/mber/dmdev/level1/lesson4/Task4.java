@@ -15,7 +15,6 @@ public class Task4 {
         int year = 2000;
         isLeapYear(year);
         System.out.println(isLeapYearBoolean(year));
-
     }
 
     public static void isLeapYear(int year) {

@@ -12,18 +12,19 @@ public class Task3 {
     public static void main(String[] args) {
         try {
             unsafe1();
-//            unsafe2();
+            unsafe2();
         } catch (MberException e) {
             System.out.println(e.getMessage());
             System.out.println(e.getCause());
             System.out.println(e.toString());
             e.printStackTrace();
         }
-
     }
+
     public static void  unsafe1() throws MberException {
         throw new MberException("test exception");
     }
+
     public static void  unsafe2() throws MberException {
         throw new MberException(new RuntimeException("runtime exception"));
     }

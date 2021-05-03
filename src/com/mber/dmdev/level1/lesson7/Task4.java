@@ -43,7 +43,6 @@ public class Task4 {
             index1 = index2;
             index2 = temp;
         }
-
         int result = 0;
         for (int i = index1 + 1; i < index2; i++) {
             result += values[i];

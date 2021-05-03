@@ -1,9 +1,7 @@
 package com.mber.dmdev.level2.lesson19.task;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * 3. Написать метод isUnique, который принимает Map&lt;String, String&gt;
@@ -36,7 +34,6 @@ public class Task3 {
         System.out.println(isUnique(map1));
         System.out.println(isUnique(map2));
     }
-
 
     private static boolean isUnique(Map<String, String> map) {
         return map.size() == new HashSet<>(map.values()).size();

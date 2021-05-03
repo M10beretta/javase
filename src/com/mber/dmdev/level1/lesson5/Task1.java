@@ -12,9 +12,6 @@ public class Task1 {
     }
 
     public static int getMax(int firstValue, int secondValue) {
-        if (firstValue > secondValue) {
-            return firstValue;
-        } else return secondValue;
-
+        return Math.max(firstValue, secondValue);
     }
 }

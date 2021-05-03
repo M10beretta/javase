@@ -13,6 +13,5 @@ public class Task1 {
             System.err.println("Hello");
             exception.printStackTrace();
         }
-
     }
 }

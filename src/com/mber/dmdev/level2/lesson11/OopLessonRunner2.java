@@ -6,7 +6,6 @@ public class OopLessonRunner2 {
         Printable mobile = new Mobile(new Ssd(125), new Ram(512));
 
         printWithRandom(laptop, mobile);
-
     }
 
     public static void print(Printable... objects) {
@@ -15,11 +14,9 @@ public class OopLessonRunner2 {
             if (object instanceof Laptop) {
                 ((Laptop) object).open();
             }
-
             System.out.println();
         }
     }
-
 
     public static void printWithRandom(Printable... objects) {
         for (Printable object : objects) {

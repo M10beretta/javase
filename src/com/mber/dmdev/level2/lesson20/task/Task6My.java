@@ -7,10 +7,9 @@ import java.util.Random;
  * исключений.
  * Вызвать этот метод в блоке try-catch, отлавливающем любое из 3-х.
  */
-public class Task6_my {
+public class Task6My {
 
     public static void main(String[] args) {
-
         for (int i = 0; i < 10; i++) {
             catchException();
         }

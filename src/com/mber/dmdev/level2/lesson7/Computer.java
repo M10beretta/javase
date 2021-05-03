@@ -5,7 +5,6 @@ public class Computer {
     private Ssd ssd;
     public static int counter = 0;
 
-
     public Computer(Ram ram, Ssd ssd) {
         this.ram = ram;
         this.ssd = ssd;

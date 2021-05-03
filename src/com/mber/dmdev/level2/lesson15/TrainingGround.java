@@ -7,7 +7,6 @@ public class TrainingGround {
         Hero archer = new Archer("Леголас", 10);
         Enemy enemy = new Enemy("Зомби", 100);
         attackEnemy(enemy, warrior, mage, archer);
-
     }
 
     public static void attackEnemy(Enemy enemy, Hero... heroes) {

@@ -3,7 +3,7 @@ package com.mber.dmdev.level2.lesson19.person;
 import java.util.Comparator;
 import java.util.Objects;
 
-public class Person implements Comparable<Person>{
+public class Person implements Comparable<Person> {
     private int id;
     private String firstName;
     private String lastName;
@@ -50,7 +50,7 @@ public class Person implements Comparable<Person>{
 
     @Override
     public int compareTo(Person o) {
-        return Integer.compare(id , o.id);
+        return Integer.compare(id, o.id);
     }
 
 

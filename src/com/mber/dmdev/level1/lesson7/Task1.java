@@ -15,8 +15,8 @@ public class Task1 {
     }
 
     public static void printArray(int[] values) {
-        for (int i = 0; i < values.length; i++) {
-            System.out.print(values[i] + " ");
+        for (int value : values) {
+            System.out.print(value + " ");
         }
         System.out.println();
     }

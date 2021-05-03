@@ -8,7 +8,6 @@ public class Task2 {
     public static void main(String[] args) {
         int value = 151652;
         testValue(value);
-
     }
 
     public static void testValue(int num) {

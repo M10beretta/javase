@@ -35,9 +35,7 @@ public class Task6 {
             System.out.println("4");
             exception.printStackTrace();
         }
-
     }
-
 
     public static void unsafe(int randomValue) throws Throwable {
         Throwable exception = EXCEPTIONS.getOrDefault(randomValue, new MberException());

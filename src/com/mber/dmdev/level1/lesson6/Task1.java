@@ -14,7 +14,7 @@ public class Task1 {
         System.out.println(result2);
 
         int result3 = factorialRecursion(value);
-        System.out.println(result2);
+        System.out.println(result3);
 
     }
 
@@ -36,10 +36,9 @@ public class Task1 {
         return results;
     }
 
-    private static int factorialRecursion(int value){
+    private static int factorialRecursion(int value) {
         if (value == 1) return 1;
-    //  6 * (5 * (4 * (3 * (2 * 1))))
-        return value*factorialRecursion(value-1);
+        return value * factorialRecursion(value - 1);
     }
 
 

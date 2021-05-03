@@ -17,7 +17,6 @@ public class Battle {
     }
 
     public static void attackEnemy(Enemy enemy, Hero... heroes) {
-
         while (enemy.isAlive()) {
             for (Hero hero : heroes) {
                 if (enemy.isAlive()) hero.attackEnemy(enemy);
