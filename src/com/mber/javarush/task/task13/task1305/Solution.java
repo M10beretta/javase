@@ -2,8 +2,6 @@ package com.mber.javarush.task.task13.task1305;
 
 /*
 Четыре ошибки
-
-todo: интефейсы; создание объекта вложенного класса в интерфейсе
 */
 
 public class Solution {

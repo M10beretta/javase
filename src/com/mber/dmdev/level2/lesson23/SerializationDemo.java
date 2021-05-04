@@ -8,7 +8,6 @@ public class SerializationDemo {
         Path path = Path.of("src", "com", "mber", "dmdev", "level2", "lesson23", "student.out");
         writeObject(path);
         readObject(path);
-
     }
 
     private static void readObject(Path path) throws IOException, ClassNotFoundException {

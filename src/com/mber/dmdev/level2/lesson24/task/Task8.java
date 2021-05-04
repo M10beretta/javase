@@ -2,7 +2,6 @@ package com.mber.dmdev.level2.lesson24.task;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
-import java.time.temporal.TemporalAdjuster;
 
 /**
  * 7. Написать свою реализацию интерфейса TemporalAdjuster, которая бы
@@ -11,7 +10,6 @@ import java.time.temporal.TemporalAdjuster;
 public class Task8 {
     public static void main(String[] args) {
         LocalDateTime now = LocalDateTime.now();
-
 
         LocalDateTime localDateTime = now.with(temporal -> temporal.plus(42L, ChronoUnit.DAYS));
         System.out.println(localDateTime);

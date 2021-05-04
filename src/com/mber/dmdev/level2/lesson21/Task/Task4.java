@@ -13,11 +13,9 @@ import java.util.stream.Collectors;
 public class Task4 {
     public static void main(String[] args) {
         List<Integer> integers = List.of(5, 2, 4, 2, 1);
-
         String results = integers.stream()
                 .map(String::valueOf)
-                .collect(Collectors.joining());
-//                .collect(Collectors.joining(",", "prefix: ", " end"));
+                .collect(Collectors.joining(",", "prefix ", " suffix"));
         System.out.println(results);
     }
 }

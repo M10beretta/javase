@@ -1,5 +1,4 @@
 package com.mber.dmdev.level2.lesson27;
-// fixme: уже не помню
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -12,24 +11,6 @@ public class ReplacingSubstrings {
                 "dsggeg3344y3hsags 6u56j5";
 
         String regex = "(\\d{3})-(\\d{2})-(\\d{2})";
-/*
-        Pattern pattern = Pattern.compile(regex);
-        Matcher matcher = pattern.matcher(phoneNumber);
-
-        StringBuilder stringBuilder = new StringBuilder();
-
-        while (matcheStringBuilderr.find()) {
-            String gr1 = matcher.group(2);
-            String gr2 = matcher.group(3);
-            String gr3 = matcher.group(4);
-
-            matcher.appendReplacement(stringBuilder, gr1 + " " + gr2+ " " + gr3);
-            matcher.appendReplacement(stringBuilder, "$2 $3 $4");
-        }
-        matcher.appendTail(stringBuilder);
-        System.out.println(stringBuilder);
-*/
-
 
         System.out.println(phoneNumber.replaceAll(regex, "$1 - $2 - $3 "));
     }
