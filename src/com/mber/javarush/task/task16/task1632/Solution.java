@@ -10,7 +10,6 @@ import java.util.List;
 Клубок
 */
 
-
 public class Solution {
     public static List<Thread> threads = new ArrayList<>(5);
 
@@ -25,8 +24,6 @@ public class Solution {
     public static void main(String[] args) {
         threads.get(3).setPriority(Thread.MIN_PRIORITY);
         System.out.println(threads.get(3).isAlive());
-
-
     }
 
     public static class Thread1 extends Thread {
