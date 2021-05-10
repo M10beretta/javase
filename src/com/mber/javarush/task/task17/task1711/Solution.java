@@ -11,7 +11,7 @@ CRUD 2
 */
 
 public class Solution {
-    public static volatile List<Person> allPeople = new ArrayList<Person>();
+    public static final List<Person> allPeople = new ArrayList<>();
 
     static {
         allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
@@ -22,6 +22,11 @@ public class Solution {
     private static final SimpleDateFormat outputFormat = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
 
     public static void main(String[] args) {
+//        args = new String[] {"-c", "Василий", "м", "15/04/1990", "Алена", "ж", "08/05/1996"};
+//        args = new String[]{"-u", "0", "Александр", "м", "21/07/1987", "1", "Елена", "ж", "08/09/1993"};
+//        args = new String[]{"-d", "0", "1"};
+//        args = new String[]{"-i", "0", "1"};
+
         try {
             switch (args[0]) {
                 case "-c":
@@ -61,8 +66,9 @@ public class Solution {
                     break;
                 case "-i":
                     synchronized (allPeople) {
-                        for (int i = 0; i < args.length; i++) {
-                            int id = Integer.parseInt(args[i]);
+                        for (int i = 1; i < args.length; i++) {
+                            String arg = args[i];
+                            int id = Integer.parseInt(arg);
                             Person person = allPeople.get(id);
                             System.out.print(person.getName() + " ");
                             System.out.print(person.getSex().equals(Sex.MALE) ? "м " : "ж ");

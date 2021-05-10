@@ -5,24 +5,23 @@ package com.mber.javarush.task.task17.task1720;
 */
 
 public class Bankomat {
-
     static BankAccount account = new BankAccount("Amigo");
 
     public static volatile boolean isStopped;
 
     public static void main(String[] args) throws InterruptedException {
         addMoney.start();
-        SpendThread spendThread = new SpendThread();
         SpendThread spendThread1 = new SpendThread();
         SpendThread spendThread2 = new SpendThread();
-        spendThread.start();
+        SpendThread spendThread3 = new SpendThread();
         spendThread1.start();
         spendThread2.start();
+        spendThread3.start();
         Thread.sleep(4000);
         isStopped = true;
     }
 
-    private static Thread addMoney = new Thread() {
+    private static final Thread addMoney = new Thread() {
         @Override
         public void run() {
             while (!isStopped) {

@@ -17,7 +17,6 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-
         try {
             String file1 = reader.readLine();
             String file2 = reader.readLine();
@@ -36,6 +35,7 @@ public class Solution {
             }
             reader1.close();
             reader2.close();
+
             allLines.forEach(System.out::println);
             System.out.println();
             new Solution().joinData();

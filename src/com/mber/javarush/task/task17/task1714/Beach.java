@@ -1,14 +1,13 @@
 package com.mber.javarush.task.task17.task1714;
 
-
 /*
 Comparable
 */
 
 public class Beach implements Comparable<Beach> {
-    private String name;      //название
-    private float distance;   //расстояние
-    private int quality;    //качество
+    private String name;
+    private final float distance;
+    private final int quality;
 
     public Beach(String name, float distance, int quality) {
         this.name = name;
@@ -28,20 +27,11 @@ public class Beach implements Comparable<Beach> {
         return distance;
     }
 
-    public synchronized void setDistance(float distance) {
-        this.distance = distance;
-    }
-
     public synchronized int getQuality() {
         return quality;
     }
 
-    public synchronized void setQuality(int quality) {
-        this.quality = quality;
-    }
-
     public synchronized static void main(String[] args) {
-
     }
 
     @Override

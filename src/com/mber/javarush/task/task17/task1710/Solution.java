@@ -12,7 +12,7 @@ CRUD
 */
 
 public class Solution {
-    public static List<Person> allPeople = new ArrayList<Person>();
+    public static List<Person> allPeople = new ArrayList<>();
 
     static {
         allPeople.add(Person.createMale("Иванов Иван", new Date()));  //сегодня родился    id=0
@@ -24,22 +24,27 @@ public class Solution {
 
 
     public static void main(String[] args) throws ParseException {
+//        args = new String[]{"Елена", "ж", "08/05/1996"};
+//        args = new String[]{"-u", "0", "Александр", "м", "21/07/1987"};
+//        args = new String[]{"-d", "0"};
+//        args = new String[]{"-i", "0"};
+
         if (args == null || args.length < 1) {
             throw new RuntimeException();
         }
-        Date birthDayDate = new Date();
+        Date birthDayDate;
         Person person;
         switch (args[0]) {
-            case "-c":
+            case "-c" -> {
                 birthDayDate = simpleDateFormat1.parse(args[3]);
                 if (args[2].equals("м"))
                     person = Person.createMale(args[1], birthDayDate);
                 else
                     person = Person.createFemale(args[1], birthDayDate);
                 allPeople.add(person);
-                         System.out.println(allPeople.size() - 1);
-                break;
-            case "-u":
+                System.out.println(allPeople.size() - 1);
+            }
+            case "-u" -> {
                 birthDayDate = simpleDateFormat1.parse(args[4]);
                 int id = Integer.parseInt(args[1]);
                 person = allPeople.get(id);
@@ -50,21 +55,20 @@ public class Solution {
                 person.setBirthDate(birthDayDate);
                 person.setName(args[2]);
                 allPeople.set(id, person);
-                break;
-            case "-d":
+            }
+            case "-d" -> {
                 Person currentPerson = allPeople.get(Integer.parseInt(args[1]));
                 currentPerson.setName(null);
                 currentPerson.setSex(null);
                 currentPerson.setBirthDate(null);
-                break;
-            case "-i":
+            }
+            case "-i" -> {
                 person = allPeople.get(Integer.parseInt(args[1]));
                 if (person != null)
                     System.out.println(person.getName() + " "
                             + (person.getSex() == Sex.MALE ? "м" : "ж") + " "
                             + simpleDateFormat2.format(person.getBirthDate()));
-                break;
-
+            }
         }
     }
 

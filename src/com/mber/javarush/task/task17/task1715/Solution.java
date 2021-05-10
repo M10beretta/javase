@@ -25,7 +25,6 @@ public class Solution {
     }
 
     public static class Apteka implements Runnable {
-
         @Override
         public void run() {
             while (!isStopped) {
@@ -38,14 +37,12 @@ public class Solution {
     }
 
     public static class Person implements Runnable {
-
         @Override
         public void run() {
             while (!isStopped) {
                 drugsController.buy(getRandomDrug(), getRandomCount());
                 waitAMoment();
             }
-
         }
     }
 
@@ -62,7 +59,7 @@ public class Solution {
     private static void waitAMoment() {
         try {
             Thread.sleep(100);
-        } catch (InterruptedException e) {
+        } catch (InterruptedException ignored) {
         }
     }
 }
