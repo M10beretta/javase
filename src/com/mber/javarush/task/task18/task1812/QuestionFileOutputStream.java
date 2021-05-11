@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 */
 
 public class QuestionFileOutputStream implements AmigoOutputStream {
-    private AmigoOutputStream original;
+    private final AmigoOutputStream original;
 
     public QuestionFileOutputStream(AmigoOutputStream original) {
         this.original = original;
@@ -42,7 +42,6 @@ public class QuestionFileOutputStream implements AmigoOutputStream {
         if (reader.readLine().equals("Д")) {
             original.close();
         }
-
     }
 }
 

@@ -22,11 +22,10 @@ public class Solution {
     private static final SimpleDateFormat outputFormat = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
 
     public static void main(String[] args) {
-//        args = new String[] {"-c", "Василий", "м", "15/04/1990", "Алена", "ж", "08/05/1996"};
-//        args = new String[]{"-u", "0", "Александр", "м", "21/07/1987", "1", "Елена", "ж", "08/09/1993"};
-//        args = new String[]{"-d", "0", "1"};
-//        args = new String[]{"-i", "0", "1"};
-
+//            args = new String[]{"-c", "Василий", "м", "15/04/1990", "Алена", "ж", "08/05/1996"};
+//            args = new String[]{"-u", "0", "Александр", "м", "21/07/1987", "1", "Елена", "ж", "08/09/1993"};
+//            args = new String[]{"-d", "0", "1"};
+//            args = new String[]{"-i", "0", "1"};
         try {
             switch (args[0]) {
                 case "-c":

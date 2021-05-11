@@ -4,27 +4,22 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /*
 Нити и байты
 */
 
-public class Solution2 {
+public class Solution {
     public static Map<String, Integer> resultMap = new HashMap<String, Integer>();
 
     public static void main(String[] args) throws IOException, InterruptedException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String fileName = reader.readLine();
-        while (!fileName.equals("exit")) {
+        for (String fileName = reader.readLine(); !fileName.equals("exit"); fileName = reader.readLine()) {
             ReadThread readThread = new ReadThread(fileName);
             readThread.start();
-            readThread.join();
-            fileName = reader.readLine();
         }
+        System.out.println(resultMap);
     }
 
     public static class ReadThread extends Thread {
@@ -35,8 +30,8 @@ public class Solution2 {
             inputStream.close();
         }
 
-        private String fileName = null;
-        ArrayList<Integer> list = new ArrayList<>();
+        private final String fileName;
+        List<Integer> list = new ArrayList<>();
 
         @Override
         public void run() {

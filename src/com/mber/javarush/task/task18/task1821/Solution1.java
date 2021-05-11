@@ -9,6 +9,7 @@ import java.io.IOException;
 
 public class Solution1 {
     public static void main(String[] args) throws IOException {
+//        args = new String[]{"src/com/mber/javarush/task/task18/task1821/file.txt"};
         if (args[0].length() == 0) return;
 
         FileReader fileReader = new FileReader(args[0]);
@@ -20,9 +21,5 @@ public class Solution1 {
         for (int i = 32; i < sym.length; i++) {
             if (sym[i] > 0) System.out.printf("%c %d\n", i, sym[i]);
         }
-
-//        for (int i = 0; i < 255; i++) {
-//            System.out.println(i + " " + (char)i);
-//        }
     }
 }

@@ -9,14 +9,8 @@ AmigoOutputStream
 */
 
 public class AmigoOutputStream extends FileOutputStream {
-    public static String fileName = "D:\\Study\\programming\\practice\\src\\com.mber.javarush\\counter\\file3.txt";
-
-    public static void main(String[] args) throws FileNotFoundException {
-        new AmigoOutputStream(new FileOutputStream(fileName));
-    }
-
-    private FileOutputStream original;
-
+    public static String fileName = "src/com/mber/javarush/task/task18/task1813/file.txt";
+    private final FileOutputStream original;
 
     public AmigoOutputStream(FileOutputStream original) throws FileNotFoundException {
         super(fileName);
@@ -45,9 +39,12 @@ public class AmigoOutputStream extends FileOutputStream {
 
     @Override
     public void close() throws IOException {
-        flush();
+        original.flush();
         write("com.mber.javarush © All rights reserved.".getBytes());
-        close();
+        original.close();
     }
 
+    public static void main(String[] args) throws IOException {
+        new AmigoOutputStream(new FileOutputStream(fileName)).close();
+    }
 }

@@ -8,10 +8,10 @@ import java.io.IOException;
 */
 
 public class Solution {
+
     public static void main(String[] args) throws IOException {
-
+//        args = new String[]{"src/com/mber/javarush/task/task18/task1816/file.txt"};
         if (args.length == 0) return;
-
         int count=0;
         try (FileReader fileReader = new FileReader(args[0])) {
             while (fileReader.ready()) {

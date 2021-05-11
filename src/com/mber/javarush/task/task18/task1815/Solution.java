@@ -8,7 +8,6 @@ import java.util.List;
 
 public class Solution {
     public class TableInterfaceWrapper implements TableInterface {
-
         TableInterface tableInterface;
 
         public TableInterfaceWrapper(TableInterface tableInterface) {
@@ -34,9 +33,7 @@ public class Solution {
 
     public interface TableInterface {
         void setModel(List rows);
-
         String getHeaderText();
-
         void setHeaderText(String newHeaderText);
     }
 

@@ -1,4 +1,4 @@
-package com.mber.javarush.task.task1608;
+package com.mber.javarush.task.task16.task1608;
 
 /*
 Продвижение на политических дебатах
