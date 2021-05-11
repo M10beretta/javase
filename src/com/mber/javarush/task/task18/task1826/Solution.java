@@ -14,7 +14,6 @@ public class Solution {
 //                ,"src/com/mber/javarush/task/task18/task1826/encrypt.txt"};
 //        args = new String[]{"-d", "src/com/mber/javarush/task/task18/task1826/encrypt.txt"
 //                , "src/com/mber/javarush/task/task18/task1826/decrypt.txt"};
-
         String mode = args[0];
         if (!(mode.equals("-e") || mode.equals("-d"))) {
             System.out.println("Unexpected value: " + args[0]);
