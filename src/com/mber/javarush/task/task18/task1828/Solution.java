@@ -10,53 +10,48 @@ import java.util.List;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        {
-            args[0] = "-u";
-            args[1] = "198478";
-            args[2] = "Майка супермен";
-            args[3] = "100.87";
-            args[4] = "50";
-            String keyboardData = "D:\\Study\\programming\\practice\\src\\com.mber.javarush\\counter\\task1828\\file1.txt.txt.txt";
-            System.setIn(new ByteArrayInputStream(keyboardData.getBytes()));
+//        args = new String[]{"-u", "2", "Майка супермен и еще много чего там", "100", "46"};
+//        args = new String[]{"-d", "198478"};
+//        String keyboard = "src/com/mber/javarush/task/task18/task1828/file.txt";
+//        System.setIn(new ByteArrayInputStream(keyboard.getBytes()));
+
+        if (args.length == 0 || !(args[0].equals("-u") || args[0].equals("-d"))) return;
+
+        var consoleReader = new BufferedReader(new InputStreamReader(System.in));
+        String file = consoleReader.readLine();
+
+        List<String> lines = new ArrayList<>();
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            while (reader.ready()) {
+                String line = reader.readLine();
+                if (line.length() > 44) lines.add(line);
+            }
         }
 
-//        {
-//            args[0] = "-d";
-//            args[1] = "19846";
-//            args[2] = " ";
-//            args[3] = " ";
-//            args[4] = " ";
-//            String keyboardData = "D:\\Study\\programming\\practice\\src\\com.mber.javarush\\counter\\task1828\\file1.txt.txt.txt";
-//            System.setIn(new ByteArrayInputStream(keyboardData.getBytes()));
-//        }
-
-
-        if (args.length == 0 || !args[0].equals("-u") && !args[0].equals("-d")) return;
-
-        String fileName;
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            fileName = reader.readLine();
-        }
-
-        List<String> list = new ArrayList<>();
-
-        try (BufferedReader fileReader = new BufferedReader(new FileReader(fileName))) {
-            while (fileReader.ready()) {
-                String string = fileReader.readLine();
-                String substring = string.substring(0, 8).trim();
-                if (args[1].equals(substring)) {
-                    if (args[0].equals("-u")) {
-                        string = String.format("%-8s%-30s%-8s%-4s", args[1], args[2], args[3], args[4]);
-                    } else if (args[0].equals("-d")) continue;
+        for (int i = 0; i < lines.size(); i++) {
+            if (args[1].equals(lines.get(i).substring(0, 8).trim())) {
+                switch (args[0]) {
+                    case "-u" -> lines.set(i, String
+                            .format("%-8.8s%-30.30s%-8.8s%-4.4s", args[1], args[2], args[3], args[4]));
+                    case "-d" -> lines.remove(i);
                 }
-                list.add(string);
             }
         }
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
-            for (String s : list) {
-                writer.write(s+"\n");
-            }
+        lines.sort((o1, o2) -> {
+                    int a = Integer.parseInt(o1.substring(0, 8).trim());
+                    int b = Integer.parseInt(o2.substring(0, 8).trim());
+                    return a - b;
+                }
+        );
+
+        StringBuilder builder = new StringBuilder();
+        for (String line : lines) builder.append(line).append("\n");
+        String data = builder.deleteCharAt(builder.length() - 1).toString();
+
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+            writer.write(data);
         }
     }
 }

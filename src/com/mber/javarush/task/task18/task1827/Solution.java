@@ -11,6 +11,8 @@ public class Solution {
 //        args = new String[]{"-c", "Майка супермен", "110.3", "50"};
 //        String keyboard = "src/com/mber/javarush/task/task18/task1827/file.txt";
 //        System.setIn(new ByteArrayInputStream(keyboard.getBytes()));
+
+        if (args.length == 0 || !args[0].equals("-c")) return;
         var consoleReader = new BufferedReader(new InputStreamReader(System.in));
         String file = consoleReader.readLine();
 
@@ -40,10 +42,9 @@ public class Solution {
 
         @Override
         public String toString() {
-            return String.format("%-8d%-30s%-8s%-4s%n", ++maxId, name, price, quantity);
+            return String.format("%-8.8s%-30.30s%-8.8s%-4.4s%n", ++maxId, name, price, quantity);
         }
     }
-
 }
 
 
