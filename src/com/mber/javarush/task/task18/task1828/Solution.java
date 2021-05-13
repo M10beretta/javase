@@ -49,7 +49,6 @@ public class Solution {
         for (String line : lines) builder.append(line).append("\n");
         String data = builder.deleteCharAt(builder.length() - 1).toString();
 
-
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             writer.write(data);
         }

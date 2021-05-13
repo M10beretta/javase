@@ -8,12 +8,11 @@ import java.util.*;
 */
 
 public class Solution {
-
     public static void main(String[] args) {
     }
 
     public static class PersonScannerAdapter implements PersonScanner {
-        private Scanner fileScanner;
+        private final Scanner fileScanner;
 
         public PersonScannerAdapter(Scanner fileScanner) {
             this.fileScanner = fileScanner;
@@ -31,7 +30,7 @@ public class Solution {
             int year = Integer.parseInt(dateStr[2].trim());
             int month = Integer.parseInt(dateStr[1].trim());
             int day = Integer.parseInt(dateStr[0].trim());
-            Date birthDate = new Date(year-1900, month-1 , day);
+            Date birthDate = new Date(year - 1900, month - 1, day);
 
             return new Person(firstName, middleName, lastName, birthDate);
         }

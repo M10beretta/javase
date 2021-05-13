@@ -6,7 +6,6 @@ TableAdapter
 
 public class Solution {
     public static void main(String[] args) {
-        //это пример вывода
         ATable aTable = new ATable() {
             @Override
             public String getCurrentUserName() {
@@ -24,7 +23,7 @@ public class Solution {
     }
 
     public static class TableAdapter implements BTable{
-        private ATable aTable;
+        private final ATable aTable;
 
         public TableAdapter(ATable aTable) {
             this.aTable = aTable;

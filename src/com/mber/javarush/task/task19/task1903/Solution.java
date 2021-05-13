@@ -8,7 +8,7 @@ import java.util.Map;
 */
 
 public class Solution {
-    public static Map<String, String> countries = new HashMap<String, String>();
+    public static Map<String, String> countries = new HashMap<>();
 
     static {
         countries.put("UA", "Ukraine");
@@ -19,11 +19,10 @@ public class Solution {
     public static void main(String[] args) {
     }
 
-    public static class IncomeDataAdapter implements Customer, Contact{
+    public static class IncomeDataAdapter implements Customer, Contact {
         private final IncomeData data;
 
         public IncomeDataAdapter(IncomeData data) {
-
             this.data = data;
         }
 
@@ -44,33 +43,26 @@ public class Solution {
 
         @Override
         public String getPhoneNumber() {
-            return String.format("+%d(%2s)%3s-%4s-%5s", data.getCountryPhoneCode(),
+            return  String.format("+%d(%2s)%3s-%4s-%5s", data.getCountryPhoneCode(),
                     String.format("%010d", data.getPhoneNumber()).substring(0, 3),
                     String.format("%010d", data.getPhoneNumber()).substring(3, 6),
                     String.format("%010d", data.getPhoneNumber()).substring(6, 8),
                     String.format("%010d", data.getPhoneNumber()).substring(8)
-                    );
+            );
         }
     }
 
-
     public static interface IncomeData {
         String getCountryCode();        //For example: UA
-
         String getCompany();            //For example: com.mber.javarush Ltd.
-
         String getContactFirstName();   //For example: Ivan
-
         String getContactLastName();    //For example: Ivanov
-
         int getCountryPhoneCode();      //For example: 38
-
         int getPhoneNumber();           //For example: 501234567
     }
 
     public static interface Customer {
         String getCompanyName();        //For example: com.mber.javarush Ltd.
-
         String getCountryName();        //For example: Ukraine
     }
 
