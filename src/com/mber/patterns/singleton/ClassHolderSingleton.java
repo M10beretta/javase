@@ -1,4 +1,4 @@
-package com.mber.patterns.singleton.type2;
+package com.mber.patterns.singleton;
 /*
 Class Holder Singleton
 
@@ -14,15 +14,15 @@ Class Holder Singleton
 ExceptionInInitializerError, а все последующие NoClassDefFoundError.
 
  */
-public class Singleton {
-    private Singleton(){
+public class ClassHolderSingleton {
+    private ClassHolderSingleton(){
     }
 
     public static class SingletonHolder{
-        public static final Singleton HOLDER_INSTANCE = new Singleton();
+        public static final ClassHolderSingleton HOLDER_INSTANCE = new ClassHolderSingleton();
 
     }
-    public static Singleton getInstance(){
+    public static ClassHolderSingleton getInstance(){
         return SingletonHolder.HOLDER_INSTANCE;
     }
 
