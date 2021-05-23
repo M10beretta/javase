@@ -1,4 +1,4 @@
-package com.mber.patterns.singleton;
+package com.mber.myAnalysis.patterns.singleton;
 
 /*
 Lazy Initialization

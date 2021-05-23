@@ -1,4 +1,4 @@
-package com.mber.other.algorithms.Sorting;
+package com.mber.myAnalysis.algorithms.sorting;
 
 /* Пузырьковая сортировка
 O(n^2) */

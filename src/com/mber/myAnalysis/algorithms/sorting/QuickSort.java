@@ -1,4 +1,4 @@
-package com.mber.other.algorithms.Sorting;
+package com.mber.myAnalysis.algorithms.sorting;
 
 /* Быстрая сортировка, сортировка Хоара
 Худшее время	O(n2)

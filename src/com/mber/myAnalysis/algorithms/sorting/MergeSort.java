@@ -1,4 +1,4 @@
-package com.mber.other.algorithms.Sorting;
+package com.mber.myAnalysis.algorithms.sorting;
 
 /* Сортировка слиянием
 Худшее время	O(n log n)

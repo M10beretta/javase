@@ -1,4 +1,4 @@
-package com.mber.other.algorithms;
+package com.mber.myAnalysis.algorithms;
 
 import java.util.Random;
 import java.util.TreeSet;
