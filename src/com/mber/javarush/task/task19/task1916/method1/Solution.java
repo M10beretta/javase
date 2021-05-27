@@ -9,7 +9,7 @@ import java.util.List;
 */
 
 public class Solution {
-    public static List<LineItem> lines = new ArrayList<LineItem>();
+    public static List<LineItem> lines = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
         BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
@@ -50,7 +50,7 @@ public class Solution {
 
     static List<String> readFileLines(String fileName) throws IOException {
         BufferedReader fReader = new BufferedReader(new FileReader(fileName));
-        List<String> fileLines = new ArrayList<String>();
+        List<String> fileLines = new ArrayList<>();
         String line;
         while ((line = fReader.readLine()) != null) {
             fileLines.add(line);

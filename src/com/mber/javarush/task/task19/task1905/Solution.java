@@ -8,7 +8,7 @@ import java.util.Map;
 */
 
 public class Solution {
-    public static Map<String, String> countries = new HashMap<String, String>();
+    public static Map<String, String> countries = new HashMap<>();
 
     static {
         countries.put("UA", "Ukraine");
@@ -31,9 +31,7 @@ public class Solution {
         @Override
         public String getCountryCode() {
             String key = null;
-            for (String s : countries.keySet()) {
-                if (customer.getCountryName().equals(countries.get(s))) key = s;
-            }
+            for (String s : countries.keySet()) if (customer.getCountryName().equals(countries.get(s))) key = s;
             return key;
         }
 
@@ -58,31 +56,25 @@ public class Solution {
         public String getDialString() {
             String[] split = contact.getPhoneNumber().split(" or ");
             String num = split[0].replaceAll("[()-]", "");
-            return String.format("callto://%s",num);
+            return String.format("callto://%s", num);
         }
     }
 
     public static interface RowItem {
         String getCountryCode();        //For example: UA
-
         String getCompany();            //For example: com.mber.javarush Ltd.
-
         String getContactFirstName();   //For example: Ivan
-
         String getContactLastName();    //For example: Ivanov
-
         String getDialString();         //For example: callto://+380501234567
     }
 
     public static interface Customer {
         String getCompanyName();        //For example: com.mber.javarush Ltd.
-
         String getCountryName();        //For example: Ukraine
     }
 
     public static interface Contact {
         String getName();               //For example: Ivanov, Ivan
-
         String getPhoneNumber();        //For example: +38(050)123-45-67 or +3(805)0123-4567 or +380(50)123-4567 or ...
     }
 }

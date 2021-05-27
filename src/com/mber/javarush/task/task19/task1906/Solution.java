@@ -17,7 +17,7 @@ public class Solution {
             fileName2 = bufferedReader.readLine();
         }
 
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         try (FileReader fileReader = new FileReader(fileName1)) {
             while (fileReader.ready()) {
                 list.add(fileReader.read());

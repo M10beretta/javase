@@ -14,11 +14,11 @@ public class Solution {
         PrintStream out = System.out;
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PrintStream stream = new PrintStream(outputStream);
-        System.setOut(stream);
-        testString.printSomething();
-        String result = outputStream.toString().toUpperCase();
-        System.setOut(out);
-        System.out.println(result);
+        System.setOut(stream); // заменили поток в консоль на поток в динамический массив
+        testString.printSomething(); // печатаем в динамический массив
+        String result = outputStream.toString().toUpperCase(); // получили строку из динамического массива
+        System.setOut(out); // вернули вывод в консоль
+        System.out.println(result); // печатаем измененную строку в консоль
 
     }
 

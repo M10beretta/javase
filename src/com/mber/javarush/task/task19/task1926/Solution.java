@@ -11,14 +11,9 @@ import java.io.InputStreamReader;
 
 public class Solution {
     public static void main(String[] args) {
-
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-             BufferedReader data = new BufferedReader(new FileReader(reader.readLine()))) {
-            while (data.ready())
-                System.out.println(new StringBuilder(data.readLine()).reverse());
-
-        } catch (IOException ignore) {
-            /* NOP */
-        }
+        try (BufferedReader file = new BufferedReader(new InputStreamReader(System.in));
+             BufferedReader reader = new BufferedReader(new FileReader(file.readLine()))) {
+            while (reader.ready()) System.out.println(new StringBuilder(reader.readLine()).reverse());
+        } catch (IOException ignore) { /* NOP */}
     }
 }

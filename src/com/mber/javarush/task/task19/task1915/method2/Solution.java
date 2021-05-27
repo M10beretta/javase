@@ -25,7 +25,7 @@ public class Solution {
         byteArrayOutputStream.writeTo(new FileOutputStream(fileName));
 
         System.setOut(realStream);
-        System.out.println(byteArrayOutputStream.toString());
+        System.out.println(byteArrayOutputStream);
 
     }
 

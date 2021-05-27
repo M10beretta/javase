@@ -16,8 +16,10 @@ public class Solution {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String file1 = reader.readLine();
-        String file2 = reader.readLine();
+//        String file1 = reader.readLine();
+//        String file2 = reader.readLine();
+        String file1 = "src/com/mber/javarush/task/task19/task1916/method2/file.txt";
+        String file2 = "src/com/mber/javarush/task/task19/task1916/method2/file.txt";
         reader.close();
         BufferedReader reader1 = new BufferedReader(new FileReader(file1));
         BufferedReader reader2 = new BufferedReader(new FileReader(file2));
