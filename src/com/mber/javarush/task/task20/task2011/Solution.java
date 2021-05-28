@@ -1,4 +1,4 @@
-package com.mber.javarush.task.task20.task2011.method1;
+package com.mber.javarush.task.task20.task2011;
 
 import java.io.*;
 
@@ -7,10 +7,9 @@ Externalizable для апартаментов
 */
 
 public class Solution {
-
-
     public static class Apartment implements Externalizable{
-
+        @Serial
+        private static final long serialVersionUID = 4332347584181052220L;
         private String address;
         private int year;
 
@@ -37,26 +36,24 @@ public class Solution {
         public void writeExternal(ObjectOutput out) throws IOException {
             out.writeObject(address);
             out.writeInt(year);
-
         }
 
         @Override
         public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
             address = (String) in.readObject();
             year = in.readInt();
-
         }
     }
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        Apartment apt = new Apartment("г.Москва, Кутузовский просп., дом 18", 2017);
-        ObjectOutputStream ou = new ObjectOutputStream(new FileOutputStream("D:\\Study\\programming\\practice\\src\\com.mber.javarush\\counter\\task2011\\method0\\file.ser"));
-        ou.writeObject(apt);
-        ou.close();
-        ObjectInputStream oi = new ObjectInputStream(new FileInputStream("D:\\Study\\programming\\practice\\src\\com.mber.javarush\\counter\\task2011\\method0\\file.ser"));
-        Apartment reApt = (Apartment) oi.readObject();
+        var apartment = new Apartment("г.Москва, Кутузовский просп., дом 18", 2017);
+        var outputStream = new ObjectOutputStream(new FileOutputStream("src/com/mber/javarush/task/task20/task2011/file.bin"));
+        outputStream.writeObject(apartment);
+        outputStream.close();
+        var inputStream = new ObjectInputStream(new FileInputStream("src/com/mber/javarush/task/task20/task2011/file.bin"));
+        Apartment reApt = (Apartment) inputStream.readObject();
         System.out.println(reApt.toString());
-        oi.close();
+        inputStream.close();
 
     }
 }

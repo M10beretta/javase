@@ -1,9 +1,7 @@
 package com.mber.javarush.task.task20.task2002;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /*
 Читаем и пишем в файл: JavaRush
@@ -15,7 +13,7 @@ public class Solution {
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
 //            File yourFile = File.createTempFile("your_file_name", null);
-            String yourFile = "D:\\Study\\programming\\practice\\src\\com.mber.javarush\\counter\\task2002\\method0\\file.ser";
+            String yourFile = "src/com/mber/javarush/task/task20/task2002/file.bin";
 
             OutputStream outputStream = new FileOutputStream(yourFile);
             InputStream inputStream = new FileInputStream(yourFile);
@@ -26,7 +24,7 @@ public class Solution {
             User mikeLee = new User();
             mikeLee.setFirstName("Mike");
             mikeLee.setLastName("Lee");
-            mikeLee.setBirthDate(new Date(1990-1900, 12-1, 25));
+            mikeLee.setBirthDate(new Date(1990-1900, Calendar.DECEMBER, 25));
             mikeLee.setMale(true);
             mikeLee.setCountry(User.Country.RUSSIA);
             javaRush.users.add(mikeLee);
@@ -34,7 +32,7 @@ public class Solution {
             User annaLee = new User();
             annaLee.setFirstName("Anna");
             annaLee.setLastName("Lee");
-            annaLee.setBirthDate(new Date(1994-1900, 10-1, 12));
+            annaLee.setBirthDate(new Date(1994-1900, Calendar.OCTOBER, 12));
             annaLee.setMale(false);
             annaLee.setCountry(User.Country.UKRAINE);
             javaRush.users.add(annaLee);
@@ -68,18 +66,12 @@ public class Solution {
             PrintWriter printWriter = new PrintWriter(outputStream);
             if (this.users.size() > 0) {
                 for (User current : this.users) {
-                    StringBuilder sb = new StringBuilder();
-                    sb.append(current.getFirstName());
-                    sb.append("/");
-                    sb.append(current.getLastName());
-                    sb.append("/");
-                    sb.append(current.getBirthDate().getTime());
-                    sb.append("/");
-                    sb.append(current.isMale());
-                    sb.append("/");
-                    sb.append(current.getCountry());
-
-                    printWriter.println(sb.toString());
+                    String data = current.getFirstName() +
+                            "/" + current.getLastName() +
+                            "/" + current.getBirthDate().getTime() +
+                            "/" + current.isMale() +
+                            "/" + current.getCountry();
+                    printWriter.println(data);
                 }
             }
             printWriter.close();
@@ -92,27 +84,20 @@ public class Solution {
             while ((line = reader.readLine()) != null) {
                 User user = new User();
                 String[] lineArray = line.split("/");
-                if (lineArray.length < 5) {
-                    break;
-                }
+
+                if (lineArray.length < 5) break;
+
                 user.setFirstName(lineArray[0]);
                 user.setLastName(lineArray[1]);
                 user.setBirthDate(new Date(Long.parseLong(lineArray[2])));
                 user.setMale(Boolean.parseBoolean(lineArray[3]));
                 switch (lineArray[4]) {
-                    case "UKRAINE":
-                        user.setCountry(User.Country.UKRAINE);
-                        break;
-                    case "RUSSIA":
-                        user.setCountry(User.Country.RUSSIA);
-                        break;
-                    default:
-                        user.setCountry(User.Country.OTHER);
-                        break;
+                    case "UKRAINE" -> user.setCountry(User.Country.UKRAINE);
+                    case "RUSSIA" -> user.setCountry(User.Country.RUSSIA);
+                    default -> user.setCountry(User.Country.OTHER);
                 }
                 this.users.add(user);
             }
-
             reader.close();
         }
 
@@ -123,7 +108,7 @@ public class Solution {
 
             JavaRush javaRush = (JavaRush) o;
 
-            return users != null ? users.equals(javaRush.users) : javaRush.users == null;
+            return Objects.equals(users, javaRush.users);
 
         }
 

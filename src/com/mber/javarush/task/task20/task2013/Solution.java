@@ -1,9 +1,6 @@
 package com.mber.javarush.task.task20.task2013;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
+import java.io.*;
 import java.util.List;
 
 /*
@@ -12,6 +9,8 @@ Externalizable Person
 
 public class Solution {
     public static class Person implements Externalizable {
+        @Serial
+        private static final long serialVersionUID = -6005195374991820291L;
         private String firstName;
         private String lastName;
         private int age;
@@ -28,11 +27,9 @@ public class Solution {
         public void setMother(Person mother) {
             this.mother = mother;
         }
-
         public void setFather(Person father) {
             this.father = father;
         }
-
         public void setChildren(List<Person> children) {
             this.children = children;
         }

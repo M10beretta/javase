@@ -1,9 +1,10 @@
-package com.mber.javarush.task.task20.task2005.method1;
+package com.mber.javarush.task.task20.task2005;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /*
 Очень странные дела
@@ -11,11 +12,10 @@ import java.util.List;
 
 public class Solution {
     public static void main(String[] args) {
-        //исправь outputStream/inputStream в соответствии с путем к твоему реальному файлу
+        //исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
 //            File your_file_name = File.createTempFile("your_file_name", null);
-            String your_file_name = "D:\\Study\\programming\\practice\\src\\com.mber.javarush\\counter\\task2005\\method0\\file.ser";
-
+            String your_file_name = "src/com/mber/javarush/task/task20/task2005/file.bin";
             OutputStream outputStream = new FileOutputStream(your_file_name);
             InputStream inputStream = new FileInputStream(your_file_name);
 
@@ -47,7 +47,8 @@ public class Solution {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             Human human = (Human) o;
-            return name.equals(human.name) && assets.equals(human.assets);
+            if (!Objects.equals(name, human.name)) return false;
+            return Objects.equals(assets, human.assets);
         }
 
         @Override
@@ -81,7 +82,6 @@ public class Solution {
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-
             this.name = reader.readLine();
             String assetName;
             while ((assetName = reader.readLine()) != null)

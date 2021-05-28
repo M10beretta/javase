@@ -1,4 +1,4 @@
-package com.mber.javarush.task.task20.task2014.method1;
+package com.mber.javarush.task.task20.task2014;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -13,14 +13,14 @@ public class Solution implements Serializable {
     public static void main(String[] args) {
         Solution savedObject = new Solution(4); System.out.println(savedObject);
 
-        String file = "D:\\Study\\programming\\practice\\src\\com.mber.javarush" +
-                "\\counter\\task2014\\method0\\file.ser";
+        String file = "src/com/mber/javarush/task/task20/task2014/file.bin";
 
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file));
              ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
             out.writeObject(savedObject);
-            Solution loadedObject = (Solution) in.readObject(); System.out.println(loadedObject);
+            Solution loadedObject = (Solution) in.readObject();
 
+            System.out.println(loadedObject);
             System.out.println(savedObject.equals(loadedObject));
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();

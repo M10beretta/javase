@@ -1,9 +1,6 @@
 package com.mber.javarush.task.task20.task2012;
 
-import java.io.Externalizable;
-import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectOutput;
+import java.io.*;
 
 /*
 OutputToConsole
@@ -20,6 +17,8 @@ public class Solution {
      * @author JavaRush
      */
     public static class OutputToConsole implements Externalizable {
+        @Serial
+        private static final long serialVersionUID = 4862972487279673513L;
         private int counter;
 
         public OutputToConsole() {

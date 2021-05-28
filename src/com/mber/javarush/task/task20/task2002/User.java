@@ -1,6 +1,7 @@
 package com.mber.javarush.task.task20.task2002;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class User {
     private String firstName;
@@ -54,7 +55,7 @@ public class User {
         RUSSIA("Russia"),
         OTHER("Other");
 
-        private String name;
+        private final String name;
 
         Country(String name) {
             this.name = name;
@@ -73,9 +74,9 @@ public class User {
         User user = (User) o;
 
         if (isMale != user.isMale) return false;
-        if (firstName != null ? !firstName.equals(user.firstName) : user.firstName != null) return false;
-        if (lastName != null ? !lastName.equals(user.lastName) : user.lastName != null) return false;
-        if (birthDate != null ? !birthDate.equals(user.birthDate) : user.birthDate != null) return false;
+        if (!Objects.equals(firstName, user.firstName)) return false;
+        if (!Objects.equals(lastName, user.lastName)) return false;
+        if (!Objects.equals(birthDate, user.birthDate)) return false;
         return country == user.country;
 
     }

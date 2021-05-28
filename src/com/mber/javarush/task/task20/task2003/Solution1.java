@@ -1,4 +1,4 @@
-package com.mber.javarush.task.task20.task2003.method1;
+package com.mber.javarush.task.task20.task2003;
 
 import java.io.*;
 import java.util.HashMap;
@@ -9,31 +9,34 @@ import java.util.Properties;
 Знакомство с properties
 */
 
-public class Solution {
+public class Solution1 {
 
     public static Map<String, String> runtimeStorage = new HashMap<>();
 
     public static void save(OutputStream outputStream) throws Exception {
+        Properties prop = new Properties();
 
-        Properties properties = new Properties();
-        properties.putAll(runtimeStorage);
-        properties.store(outputStream, "my comments");
+        for (Map.Entry<String, String> pair : runtimeStorage.entrySet()) {
+            prop.setProperty(pair.getKey(), pair.getValue());
+        }
+
+        prop.store(outputStream, null);
     }
 
     public static void load(InputStream inputStream) throws IOException {
+        Properties prop = new Properties();
+        prop.load(inputStream);
 
-        Properties properties = new Properties();
-        properties.load(inputStream);
-        properties.forEach((k, v) -> runtimeStorage.put((String) k, (String) v));
-
+        for (Map.Entry<Object, Object> pair : prop.entrySet()) {
+            runtimeStorage.put(pair.getKey().toString(), pair.getValue().toString());
+        }
     }
 
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
              FileInputStream fos = new FileInputStream(reader.readLine())) {
             load(fos);
-            Solution.save(new FileOutputStream(reader.readLine()));
-        } catch (Exception e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 

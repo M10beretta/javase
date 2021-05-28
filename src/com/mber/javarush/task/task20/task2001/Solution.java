@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /*
 Читаем и пишем в файл: Human
@@ -14,7 +15,7 @@ public class Solution {
         //исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
 //            File your_file_name = File.createTempFile("your_file_name", null);
-            String your_file_name = "D:\\Study\\programming\\practice\\src\\com.mber.javarush\\counter\\task2001\\method0\\file.ser";
+            String your_file_name = "src/com/mber/javarush/task/task20/task2001/file.bin";
             OutputStream outputStream = new FileOutputStream(your_file_name);
             InputStream inputStream = new FileInputStream(your_file_name);
 
@@ -59,8 +60,8 @@ public class Solution {
 
             Human human = (Human) o;
 
-            if (name != null ? !name.equals(human.name) : human.name != null) return false;
-            return assets != null ? assets.equals(human.assets) : human.assets == null;
+            if (!Objects.equals(name, human.name)) return false;
+            return Objects.equals(assets, human.assets);
         }
 
         @Override
@@ -86,7 +87,6 @@ public class Solution {
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-
             this.name = reader.readLine();
             while (reader.ready()) {
                 String assetName = reader.readLine();

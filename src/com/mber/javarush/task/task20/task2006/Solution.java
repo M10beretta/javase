@@ -5,13 +5,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 /*
 Как сериализовать?
 */
 
 public class Solution {
     public static class Human implements Serializable {
+        @Serial
+        private static final long serialVersionUID = -1113544807716332106L;
+
         public String name;
         public List<String> assets = new ArrayList<>();
 

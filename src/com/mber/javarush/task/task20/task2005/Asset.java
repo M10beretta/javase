@@ -1,11 +1,13 @@
-package com.mber.javarush.task.task20.task2005.method0;
+package com.mber.javarush.task.task20.task2005;
+
+import java.util.Objects;
 
 public class Asset {
     public Asset(String name) {
         this.name = name;
     }
 
-    private String name;
+    private final String name;
     private double price;
 
     public String getName() {
@@ -24,12 +26,9 @@ public class Asset {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Asset asset = (Asset) o;
-
         if (Double.compare(asset.price, price) != 0) return false;
-        return name != null ? name.equals(asset.name) : asset.name == null;
-
+        return Objects.equals(name, asset.name);
     }
 
     @Override
