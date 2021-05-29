@@ -30,7 +30,7 @@ public class Solution {
     }
 
     public class C extends B {
-        String name = "C";
+        String name;
 
         public C(String name) {
             super(name);

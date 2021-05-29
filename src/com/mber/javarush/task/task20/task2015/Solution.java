@@ -7,6 +7,8 @@ import java.io.*;
 */
 
 public class Solution implements Serializable , Runnable{
+    @Serial
+    private static final long serialVersionUID = 4813861917726147106L;
     private transient Thread runner;
     private final int speed;
 
@@ -39,15 +41,15 @@ public class Solution implements Serializable , Runnable{
     }
 
     public static void main(String[] args) {
-        Solution savedObject = new Solution(10); System.out.println(savedObject.toString());
+        Solution savedObject = new Solution(10); System.out.println(savedObject);
 
-        String file = "D:\\Study\\programming\\practice\\src" +
-                "\\com.mber.javarush\\counter\\task2015\\method0\\file.ser";
+        String file = "src/com/mber/javarush/task/task20/task2015/file.bin";
 
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file));
              ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
             out.writeObject(savedObject);
-            Solution loadedObject = (Solution) in.readObject(); System.out.println(loadedObject.toString());
+            Solution loadedObject = (Solution) in.readObject();
+            System.out.println(loadedObject.toString());
 
         } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();

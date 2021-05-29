@@ -10,6 +10,9 @@ Serializable Solution
 */
 
 public class Solution implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -2692150538706273864L;
+
     public static void main(String[] args) {
         Solution savedObject = new Solution(4); System.out.println(savedObject);
 

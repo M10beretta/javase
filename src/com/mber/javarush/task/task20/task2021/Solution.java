@@ -7,6 +7,9 @@ import java.io.*;
 */
 
 public class Solution implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -7809036020389622765L;
+
     public static class SubSolution extends Solution {
         private void writeObject(ObjectOutputStream out) throws IOException {
             throw new NotSerializableException("Не сегодня!");
@@ -18,7 +21,6 @@ public class Solution implements Serializable {
     }
 
     public static void main(String[] args) {
-
     }
 }
 

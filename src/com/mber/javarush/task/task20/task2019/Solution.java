@@ -9,22 +9,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution implements Serializable {
+    @Serial
+    private static final long serialVersionUID = -6518289803123435337L;
 
     public static void main(String[] args) throws Exception {
-        FileOutputStream fileOutput = new FileOutputStream("your.file.name");
-        ObjectOutputStream outputStream = new ObjectOutputStream(fileOutput);
+        String file = "src/com/mber/javarush/task/task20/task2019/file.bin";
 
-        Solution solution = new Solution();
+        var fileOutput = new FileOutputStream(file);
+        var outputStream = new ObjectOutputStream(fileOutput);
+
+        var solution = new Solution();
         outputStream.writeObject(solution);
 
         fileOutput.close();
         outputStream.close();
 
         //load
-        FileInputStream fiStream = new FileInputStream("your.file.name");
-        ObjectInputStream objectStream = new ObjectInputStream(fiStream);
+        var fiStream = new FileInputStream(file);
+        var objectStream = new ObjectInputStream(fiStream);
 
-        Solution loadedObject = (Solution) objectStream.readObject();
+        var loadedObject = (Solution) objectStream.readObject();
 
         fiStream.close();
         objectStream.close();
@@ -33,7 +37,7 @@ public class Solution implements Serializable {
         System.out.println(loadedObject.size());
     }
 
-    private Map<String, String> m = new HashMap<>();
+    private final Map<String, String> m = new HashMap<>();
 
     public Map<String, String> getMap() {
         return m;
@@ -41,9 +45,7 @@ public class Solution implements Serializable {
 
     public Solution() {
         m.put("Mickey", "Mouse");
-        m.put("Mickey", "Mantle");
     }
-
     public int size() {
         return m.size();
     }

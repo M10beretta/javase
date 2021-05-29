@@ -1,4 +1,4 @@
-package com.mber.javarush.task.task20.task2020.method2;
+package com.mber.javarush.task.task20.task2020;
 
 import java.io.*;
 import java.util.logging.Logger;
@@ -8,8 +8,9 @@ import java.util.logging.Logger;
 */
 
 public class Solution {
-
     public static class Person implements Serializable {
+        @Serial
+        private static final long serialVersionUID = 5661269254253662060L;
         String firstName;
         String lastName;
         transient String fullName;
@@ -30,11 +31,6 @@ public class Solution {
             this.logger = Logger.getLogger(String.valueOf(Person.class));
         }
 
-private Object readResolve() {
-    return new Person(this.firstName, this.lastName, this.country, this.sex);
-}
-
-
         @Override
         public String toString() {
             return "Person{" +
@@ -49,24 +45,19 @@ private Object readResolve() {
         }
     }
 
-
     enum Sex {
         MALE,
         FEMALE
     }
 
     public static void main(String[] args) {
-
-
-        Person personSave = new Person("Mike", "Moody", "USA", Sex.MALE);
+        var personSave = new Person("Mike", "Moody", "USA", Sex.MALE);
         System.out.println(personSave);
-
-        final String file = "D:\\Study\\programming\\practice\\src\\com.mber.javarush\\counter\\task2020\\method2\\file.ser";
-        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file));
-             ObjectInputStream in = new ObjectInputStream(new FileInputStream(file))) {
+        final String file = "src/com/mber/javarush/task/task20/task2020/file.bin";
+        try (var out = new ObjectOutputStream(new FileOutputStream(file));
+             var in = new ObjectInputStream(new FileInputStream(file))) {
             out.writeObject(personSave);
-
-            Person personLoad = (Person) in.readObject();
+            var personLoad = (Person) in.readObject();
             System.out.println(personLoad);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();

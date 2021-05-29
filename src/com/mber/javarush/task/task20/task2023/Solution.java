@@ -2,6 +2,17 @@ package com.mber.javarush.task.task20.task2023;
 
 /*
 Делаем правильный вывод
+
+Расставить обращение к методам суперкласса и модификаторы доступа так, чтобы вывод на экран был следующим:
+
+C class, method2
+A class, method2
+A class, method1
+B class, method1
+
+1. Из одного метода можно вызвать только один метод суперкласса.
+2. Из одного метода можно вызвать только один метод класса.
+3. Можно менять модификаторы доступа к методам.
 */
 
 public class Solution {
@@ -12,7 +23,7 @@ public class Solution {
 
     public static class A {
         private void method1() {
-            System.out.println("A class, method0");
+            System.out.println("A class, method1");
         }
 
         public void method2() {
@@ -24,7 +35,7 @@ public class Solution {
     public static class B extends A {
         public void method1() {
             super.method2();
-            System.out.println("B class, method0");
+            System.out.println("B class, method1");
         }
 
         public void method2() {
@@ -34,13 +45,21 @@ public class Solution {
 
     public static class C extends B {
         public void method1() {
-            System.out.println("C class, method0");
+            System.out.println("C class, method1");
         }
 
         public void method2() {
             System.out.println("C class, method2");
-//            super.method0();
+//            super.method1();
         }
     }
 }
+
+
+
+
+
+
+
+
 

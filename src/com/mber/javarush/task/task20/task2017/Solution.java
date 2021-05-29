@@ -1,4 +1,4 @@
-package com.mber.javarush.task.task20.task2017.method0;
+package com.mber.javarush.task.task20.task2017;
 
 import java.io.ObjectInputStream;
 import java.io.Serializable;
@@ -27,7 +27,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-
     }
 }
 
