@@ -1,4 +1,4 @@
-package com.mber.javarush.task.task21.task2101.method0;
+package com.mber.javarush.task.task21.task2101;
 
 /*
 Определяем адрес сети
@@ -23,7 +23,7 @@ IP-адрес: 11000000 10101000 00000001 00000010 (192.168.1.2)
 4. Метод print должен преобразовывать переданный ему IP адрес в двоичный код и выводить на экран(как в условии).
 */
 
-public class Solution {
+public class Solution1 {
     public static void main(String[] args) {
         byte[] ip = new byte[]{(byte) 192, (byte) 168, 1, 2};
         byte[] mask = new byte[]{(byte) 255, (byte) 255, (byte) 254, 0};

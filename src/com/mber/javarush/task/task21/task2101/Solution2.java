@@ -1,6 +1,6 @@
-package com.mber.javarush.task.task21.task2101.method1;
+package com.mber.javarush.task.task21.task2101;
 
-public class Solution {
+public class Solution2 {
     public static void main(String[] args) {
         byte[] ip = new byte[]{(byte) 192, (byte) 168, 1, 2};
         byte[] mask = new byte[]{(byte) 255, (byte) 255, (byte) 254, 0};
