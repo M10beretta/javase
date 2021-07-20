@@ -42,7 +42,7 @@ public class Solution {
 
     @Override
     protected void finalize() throws Throwable {
-        if(connection==null) return;
+        if (connection == null) return;
         connection.close();
         super.finalize();
     }
