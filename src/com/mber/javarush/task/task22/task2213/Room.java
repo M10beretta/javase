@@ -118,6 +118,8 @@ public class Room {
         System.out.println();
     }
 
+
+
     public int getWidth() {
         return width;
     }

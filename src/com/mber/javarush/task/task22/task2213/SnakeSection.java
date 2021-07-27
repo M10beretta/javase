@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class SnakeSection {
 
-   private final int x;
+    private final int x;
     private final int y;
 
     public SnakeSection(int x, int y) {
