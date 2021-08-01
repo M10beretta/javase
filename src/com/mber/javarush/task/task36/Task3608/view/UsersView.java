@@ -8,8 +8,10 @@ public class UsersView implements View {
 
     @Override
     public void refresh(ModelData modelData) {
-        if (modelData.isDisplayDeletedUserList()) System.out.println("All deleted users: ");
-        else System.out.println("All users: ");
+//        if (modelData.isDisplayDeletedUserList()) System.out.println("All deleted users: ");
+//        else System.out.println("All users: ");
+
+        System.out.println("All " + (modelData.isDisplayDeletedUserList() ? "deleted" : "") + " users: ");
         modelData.getUsers().forEach(x -> System.out.println("\t" + x));
         System.out.println("==================================================");
     }
@@ -30,5 +32,4 @@ public class UsersView implements View {
     public void fireEventOpenUserEditForm(long id){
         controller.onOpenUserEditForm(id);
     }
-
 }
