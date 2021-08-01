@@ -9,7 +9,7 @@ public class Controller {
     private UsersView usersView;
     private EditUserView editUserView;
 
-    public void onShowAllUsers(){
+    public void onShowAllUsers() {
         model.loadUsers();
         usersView.refresh(model.getModelData());
     }
@@ -30,13 +30,18 @@ public class Controller {
         model.loadDeleteUsers();
     }
 
-    public void onOpenUserEditForm(long userId){
+    public void onOpenUserEditForm(long userId) {
         model.loadUserById(userId);
         editUserView.refresh(model.getModelData());
     }
 
     public void onUserDeleted(long id) {
         model.deleteUserById(id);
+        usersView.refresh(model.getModelData());
+    }
+
+    public void onUseChange(String name, long id, int level) {
+        model.changeUserData(name, id, level);
         usersView.refresh(model.getModelData());
     }
 }
