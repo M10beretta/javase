@@ -19,6 +19,7 @@ public class FakeModel implements Model {
         users.add(new User("Tom", 1L, 1));
         users.add(new User("Mike", 2L, 1));
         modelData.setUsers(users);
+        modelData.setDisplayDeletedUserList(false);
     }
 
     @Override

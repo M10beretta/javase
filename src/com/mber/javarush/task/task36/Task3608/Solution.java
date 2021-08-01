@@ -17,5 +17,7 @@ public class Solution {
 
         usersView.fireEventShowAllUsers();
         usersView.fireEventDeletedUsers();
+
+
     }
 }

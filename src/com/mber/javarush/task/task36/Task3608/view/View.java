@@ -9,7 +9,4 @@ public interface View {
 
     void setController(Controller controller);
 
-//    void fireEventShowAllUsers();
-
-//    void fireEventDeletedUsers();
 }
