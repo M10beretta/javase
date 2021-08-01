@@ -22,7 +22,16 @@ public class Controller {
         this.usersView = usersView;
     }
 
+    public void setEditUserView(EditUserView editUserView) {
+        this.editUserView = editUserView;
+    }
+
     public void onShowAllDeletedUsers() {
         model.loadDeleteUsers();
+    }
+
+    public void onOpenUserEditForm(long userId){
+        model.loadUserById(userId);
+        editUserView.refresh(model.getModelData());
     }
 }
