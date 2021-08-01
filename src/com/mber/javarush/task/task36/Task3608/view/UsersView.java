@@ -18,8 +18,13 @@ public class UsersView implements View {
         this.controller = controller;
     }
 
-
+//    @Override
     public void fireEventShowAllUsers() {
         controller.onShowAllUsers();
+    }
+
+//    @Override
+    public void fireEventDeletedUsers() {
+        controller.onShowAllDeletedUsers();
     }
 }
