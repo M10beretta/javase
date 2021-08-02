@@ -1,0 +1,1 @@
+Создание и остановка нитей: start, interrupt, sleep, yield.
