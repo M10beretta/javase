@@ -1,4 +1,4 @@
-package com.mber.megahub.post77;
+package com.mber.megahub.multithreading.post77;
 
 import java.util.concurrent.Callable;
 
