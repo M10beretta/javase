@@ -58,7 +58,6 @@ class Resource {
         this.i = i;
 
         changeJ();
-
     }
 
     public void changeJ() {
@@ -68,5 +67,4 @@ class Resource {
 
         lock.unlock();
     }
-
 }

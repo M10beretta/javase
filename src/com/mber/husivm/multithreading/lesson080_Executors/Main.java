@@ -11,7 +11,6 @@ public class Main {
         service.submit(new MyRunnable());
         System.out.println(service.submit(new MyCallable()).get());
         service.shutdown();
-
     }
 
 
@@ -19,7 +18,6 @@ public class Main {
         @Override
         public void run() {
             System.out.println(1);
-
         }
     }
 
@@ -29,5 +27,4 @@ public class Main {
             return "2";
         }
     }
-
 }

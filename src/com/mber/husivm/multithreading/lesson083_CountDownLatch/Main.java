@@ -5,17 +5,10 @@ import java.util.concurrent.CountDownLatch;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         var countDownLatch = new CountDownLatch(5);
-
-        for (int i = 0; i < 10; i++) {
-            new Work(countDownLatch);
-        }
-
+        for (int i = 0; i < 10; i++) new Work(countDownLatch);
         countDownLatch.await();
-
         System.out.println("five works completed");
-
     }
-
 
 }
 class Work extends Thread{

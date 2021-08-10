@@ -6,13 +6,11 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class Main {
     public static void main(String[] args) {
-
         for (int i = 0; i < 20; i++) {
             new Main.AccountPlus().start();
             new Main.AccountMinus().start();
         }
     }
-
 
     static Lock lock = new ReentrantLock();
     static Condition condition = lock.newCondition();
