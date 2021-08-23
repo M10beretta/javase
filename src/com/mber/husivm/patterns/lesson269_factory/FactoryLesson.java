@@ -1,4 +1,4 @@
-package com.mber.husivm.patterns.lesson269;
+package com.mber.husivm.patterns.lesson269_factory;
 
 // Factory
 

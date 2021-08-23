@@ -1,4 +1,4 @@
-package com.mber.husivm.patterns.lesson271;
+package com.mber.husivm.patterns.lesson271_factory_method;
 
 // Factory Method
 // создание объекта через метод

@@ -1,4 +1,4 @@
-package com.mber.husivm.patterns.lesson270;
+package com.mber.husivm.patterns.lesson270_abstract_factory;
 
 // Abstract Factory - фабрика фабрик
 
