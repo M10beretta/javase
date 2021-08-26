@@ -10,7 +10,7 @@ public class ReadObject {
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(
                 "D:\\Study\\programming\\practice\\src\\" +
-                        "com.mber.alishev\\beginner\\lesson46serializingAnArray\\method3\\people.bin"))){
+                        "com.mber.topic.multithreading.alishev\\beginner\\lesson46serializingAnArray\\method3\\people.bin"))){
 
             Person[] people = (Person[]) ois.readObject();
 

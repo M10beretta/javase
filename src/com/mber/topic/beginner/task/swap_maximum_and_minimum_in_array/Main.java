@@ -7,14 +7,16 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         int[] nums = new int[]{6, 7, 3, 4, 5, -7};
-
         System.out.println(Arrays.toString(nums));
+        swapMaxMin(nums);
+        System.out.println(Arrays.toString(nums));
+    }
 
-        int minValue = nums[0];
-        int maxValue = nums[0];
-
+    private static void swapMaxMin(int[] nums) {
         int minIndex = 0;
         int maxIndex = 0;
+        int minValue = nums[0];
+        int maxValue = nums[0];
 
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] < minValue) {minIndex = i;minValue = nums[i];}
@@ -23,8 +25,6 @@ public class Main {
 
         nums[minIndex] = maxValue;
         nums[maxIndex] = minValue;
-
-        System.out.println(Arrays.toString(nums));
     }
 }
 

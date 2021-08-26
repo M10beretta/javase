@@ -17,6 +17,15 @@ public class BubbleSort {
             bubbleSort(arr);
             System.out.println(System.currentTimeMillis() - start + " ms bubbleSort");
         }
+
+        for (int i = 0; i < 30; i++) {
+            int[] arr = Arrays.stream(new int[10_000])
+                    .map(v -> v = new Random().nextInt(100))
+                    .toArray();
+            long start = System.currentTimeMillis();
+            bubbleSortOptimised(arr);
+            System.out.println(System.currentTimeMillis() - start + " ms bubbleSortOptimised");
+        }
     }
 
     /* Пузырьковая сортировка O(n^2) , работает, меняя местами соседние элементы,

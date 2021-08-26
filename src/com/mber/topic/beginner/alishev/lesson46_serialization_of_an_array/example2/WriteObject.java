@@ -10,7 +10,7 @@ public class WriteObject {
                 new Person(2, "Mike"), new Person(3, "Den")};
         try {
             FileOutputStream fos = new FileOutputStream("D:\\Study\\" +
-                    "programming\\practice\\src\\com.mber.alishev\\" +
+                    "programming\\practice\\src\\com.mber.topic.multithreading.alishev\\" +
                     "beginner\\lesson46serializingAnArray\\_\\people.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 

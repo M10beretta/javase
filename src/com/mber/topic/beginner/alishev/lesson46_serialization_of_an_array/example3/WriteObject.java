@@ -9,7 +9,7 @@ public class WriteObject {
         Person[] people = {new Person(1, "Bob"),
                 new Person(2, "Mike"), new Person(3, "Jim")};
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(
-                "D:\\Study\\programming\\practice\\src\\com.mber.alishev" +
+                "D:\\Study\\programming\\practice\\src\\com.mber.topic.multithreading.alishev" +
                         "\\beginner\\lesson46serializingAnArray\\method3\\people.bin"))) {
 
             oos.writeObject(people);

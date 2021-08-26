@@ -10,7 +10,7 @@ public class ReadObject {
 
         try {
             FileInputStream fis = new FileInputStream("D:\\Study\\" +
-                    "programming\\practice\\src\\com.mber.alishev\\" +
+                    "programming\\practice\\src\\com.mber.topic.multithreading.alishev\\" +
                     "beginner\\lesson46serializingAnArray\\_\\people.bin");
             ObjectInputStream ois = new ObjectInputStream(fis);
 

@@ -11,7 +11,7 @@ public class WriteObject {
 
         try {
             FileOutputStream fos = new FileOutputStream("D:\\Study\\" +
-                    "programming\\practice\\src\\com.mber.alishev\\" +
+                    "programming\\practice\\src\\com.mber.topic.multithreading.alishev\\" +
                     "beginner\\lesson45serialization\\people.bin");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
 
