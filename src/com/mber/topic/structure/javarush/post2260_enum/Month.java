@@ -1,4 +1,4 @@
-package com.mber.javarush.groups.posts.post2260;
+package com.mber.topic.structure.javarush.post2260_enum;
 
 public enum Month {
 

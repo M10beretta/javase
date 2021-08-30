@@ -1,6 +1,6 @@
 package com.mber.topic.structure;
 
-/*public*/interface Interface {
+/*public*/ interface Interface {
                            int fieldIntInit = 0;
     public                 int fieldPublicIntInit = 0;
               static       int fieldStaticIntInit = 0;
@@ -21,14 +21,39 @@ package com.mber.topic.structure;
     public default void methodPublicDefaultVoid(){}
 
     public static void main(String[] args) {
-        ((Interface) () -> {}).methodAbstractVoid();
 
         ((Interface) () -> {}).methodPrivateVoid();
-        methodPrivateStaticVoid();
-        methodStaticVoid();
-        methodPublicStaticVoid();
+        Interface.methodPrivateStaticVoid();
+        Interface.methodStaticVoid();
+        Interface.methodPublicStaticVoid();
+
 
         ((Interface) () -> {}).methodDefaultVoid();
         ((Interface) () -> {}).methodPublicDefaultVoid();
+
+
+        Interface local = new Interface() {
+            @Override
+            public void methodAbstractVoid() {
+                System.out.println("hi");
+            }
+
+
+            @Override
+            public void methodDefaultVoid() {
+                Interface.super.methodDefaultVoid();
+            }
+
+            @Override
+            public void methodPublicDefaultVoid() {
+                Interface.super.methodPublicDefaultVoid();
+            }
+        };
+
+        local.methodAbstractVoid();
+        local.methodPrivateVoid();
+        local.methodDefaultVoid();
+        local.methodPublicDefaultVoid();
+
     }
 }

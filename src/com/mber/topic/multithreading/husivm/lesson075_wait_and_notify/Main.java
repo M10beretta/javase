@@ -9,6 +9,7 @@ public class Main {
     public static void main(String[] args) {
         new Operator().start();
         new Machine().start();
+
     }
 
     static List<String> strings = Collections.synchronizedList(new ArrayList<>());

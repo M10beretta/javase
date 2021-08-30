@@ -1,4 +1,4 @@
-package com.mber.javarush.groups.posts.post654;
+package com.mber.topic.net.socket.javarush;
 
 import java.io.*;
 import java.net.Socket;
