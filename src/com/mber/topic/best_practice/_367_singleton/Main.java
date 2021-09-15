@@ -48,7 +48,7 @@ class Singleton3 {
         return singleton;
     }
 }
-
+// best
 enum MySingleton {
     INSTANCE;
     public void doJob(){

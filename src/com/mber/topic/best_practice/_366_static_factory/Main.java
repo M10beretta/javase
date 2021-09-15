@@ -16,7 +16,7 @@ import java.util.Random;
 //disadvantages
 //1. cant subclass if all constructors private
 //2. not intuitive
-public class StaticFactory {
+public class Main {
     public static void main(String[] args) throws SQLException {
 
         //examples
@@ -50,11 +50,13 @@ class Car {
     public static Car getSportCar() {
         return new Car(2);
     }
+
     //2
     public static Car getColorCar(String color) {
         if (cache.containsKey(color)) return cache.get(color);
         else return cache.put(color, new Car(color));
     }
+
     //3
     public static Car getFerrari() {
         return new Ferrari();
