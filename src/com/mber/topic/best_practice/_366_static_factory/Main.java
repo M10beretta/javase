@@ -10,12 +10,12 @@ import java.util.Random;
 //static factory methods vs constructors
 
 //advantages
-//1. name
-//2. cache
-//3. inheritance
+//name
+//cache
+//inheritance
 //disadvantages
-//1. cant subclass if all constructors private
-//2. not intuitive
+//cant subclass if all constructors private
+//not intuitive
 public class Main {
     public static void main(String[] args) throws SQLException {
 

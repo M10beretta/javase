@@ -12,14 +12,14 @@ class MyClass1{
         try {
             /*if (resource.isOpen()) logger.log(logger.getLevel(), "...");*/
         } finally {
-            super.finalize();   // is commonly called, for protection, but it is better to use an anonymous class
+            super.finalize();   //is commonly called, for protection, but it is better to use an anonymous class
         }
     }
 }
 
 //1.2 best
 class MyClass2{
-    // anonimous
+    // anonymous
     private final Object finalizerGuardian = new Object(){
         @Override
         protected void finalize() throws Throwable {

@@ -6,7 +6,7 @@ import java.util.Date;
 //never make the client do anything the library can do for the client
 //final fields' problem
 //creation time
-//use constructor or factory analog //can use interface
+//use constructor or factory analog // can use interface
 //example
 public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
