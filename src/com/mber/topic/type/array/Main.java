@@ -2,7 +2,7 @@ package com.mber.topic.type.array;
 
 import java.util.Arrays;
 
-class Array {
+class Main {
     public static void main(String[] args) {
         String[] ar11 = new String[3], ar12 = new String[]{"0", "1", "2"},
                 ar13 = {"0", "1", "2"};
