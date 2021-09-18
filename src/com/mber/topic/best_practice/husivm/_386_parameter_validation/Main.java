@@ -14,12 +14,9 @@ public class Main {
         new ValidateParams().doJob(-5, null);
         BigInteger bigInteger = new BigInteger("5");
     }
-
-
 }
 
 class ValidateParams {
-
 
     void doJob(int i, String s) {
         if (i <= 0) throw new ArithmeticException("i= " + i);
