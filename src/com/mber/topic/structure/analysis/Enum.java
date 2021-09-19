@@ -1,6 +1,10 @@
-package com.mber.topic.structure;
+package com.mber.topic.structure.analysis;
 
-/*public*/class Class {
+public enum Enum {
+
+    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY,
+    ONE(1), TWO(2);
+
 
     private                int fieldPrivateInt;
                            int fieldInt;
@@ -31,11 +35,8 @@ package com.mber.topic.structure;
            {}
     static {}
 
-    private   Class(byte a) {}
-              Class() { }
-    protected Class(short a) {}
-    public    Class(int a) {}
-
+    private   Enum(int a) {}
+              Enum() {}
 
 
     private                void methodPrivateVoid(){}
@@ -55,24 +56,18 @@ package com.mber.topic.structure;
     protected static final void methodProtectedStaticFinalVoid(){}
     public    static final void methodPublicStaticFinalVoid(){}
 
+
     public static void main(String[] args) {
-        new Class().methodPrivateVoid();
-        new Class().methodVoid();
-        new Class().methodProtectedVoid();
-        new Class().methodPublicVoid();
         methodPrivateStaticVoid();
         methodStaticVoid();
         methodProtectedStaticVoid();
         methodPublicStaticVoid();
-        new Class().methodPrivateFinalVoid();
-        new Class().methodFinalVoid();
-        new Class().methodProtectedFinalVoid();
-        new Class().methodPublicFinalVoid();
         methodPrivateStaticFinalVoid();
         methodStaticFinalVoid();
         methodProtectedStaticFinalVoid();
         methodPublicStaticFinalVoid();
+
+        Enum[] values = Enum.values();
+        int ordinal = THURSDAY.ordinal();
     }
 }
-
-

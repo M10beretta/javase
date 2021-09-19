@@ -1,4 +1,4 @@
-package com.mber.topic.structure;
+package com.mber.topic.structure.analysis;
 
 /*public*/ interface Interface {
                            int fieldIntInit = 0;

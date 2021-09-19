@@ -1,4 +1,4 @@
-package com.mber.topic.structure;
+package com.mber.topic.structure.analysis;
 
 public class Internal {
     abstract class AbstractClassInner {
