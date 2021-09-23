@@ -1,0 +1,8 @@
+package com.mber.topic.core.dmdev.level2.lesson25_multithreading;
+
+public class SimpleRunnable implements Runnable{
+    @Override
+    public void run() {
+        System.out.println("Hello from runnable: " + Thread.currentThread().getName());
+    }
+}

@@ -54,6 +54,5 @@ package com.mber.topic.structure.analysis;
         local.methodPrivateVoid();
         local.methodDefaultVoid();
         local.methodPublicDefaultVoid();
-
     }
 }
