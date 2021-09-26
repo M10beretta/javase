@@ -1,6 +1,6 @@
 package com.mber.javarush.task.task23.task2309;
 
-/* todo
+/*
 Анонимность иногда так приятна!
 */
 
