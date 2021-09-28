@@ -2,7 +2,6 @@ package com.mber.javarush.task.task22.task2209;
 
 /*
 Составить цепочку слов
-todo
 */
 
 import java.io.BufferedReader;
