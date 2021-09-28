@@ -1,4 +1,4 @@
-package com.mber.topic.lambda.sourcecode.lesson1.part1;
+package com.mber.topic.stream.sourcecode.lesson1.part1;
 
 public class Main {
     public static void main(String[] args) {

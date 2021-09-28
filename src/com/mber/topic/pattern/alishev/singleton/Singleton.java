@@ -3,7 +3,7 @@ package com.mber.topic.pattern.alishev.singleton;
 // Neil Alishev
 
 public class Singleton {
-    // В этой статической(!) переменной будет хранится единственный объект класса Singleton
+    // В этой статической(!) переменной будет храниться единственный объект класса Singleton
     private static Singleton instance;
 
     // Скажем, что у нашего единственного объекта должно быть поле value

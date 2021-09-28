@@ -1,4 +1,4 @@
-package com.mber.topic.lambda.sourcecode.lesson1.part2;
+package com.mber.topic.stream.sourcecode.lesson1.part2;
 
 public interface Operation {
     double getResult();

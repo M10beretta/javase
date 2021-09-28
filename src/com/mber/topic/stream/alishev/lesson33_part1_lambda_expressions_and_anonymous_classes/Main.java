@@ -1,4 +1,4 @@
-package com.mber.topic.lambda.alishev.lesson33_part1_lambda_expressions_and_anonymous_classes;
+package com.mber.topic.stream.alishev.lesson33_part1_lambda_expressions_and_anonymous_classes;
 
 // лямбда выражения и анонимные классы
 

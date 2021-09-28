@@ -1,4 +1,4 @@
-package com.mber.topic.lambda.alishev.lesson34_using_in_special_methods;
+package com.mber.topic.stream.alishev.lesson34_using_in_special_methods;
 
 // использование лямбда выражений в специальных методах
 

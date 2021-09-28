@@ -1,4 +1,4 @@
-package com.mber.topic.lambda.alishev.lesson33_part2_implementing_Comparator;
+package com.mber.topic.stream.alishev.lesson33_part2_implementing_Comparator;
 
 /* реализуем Comparator, сравнение строк по длине
 с помощью лямбда выражений и анонимных классов */

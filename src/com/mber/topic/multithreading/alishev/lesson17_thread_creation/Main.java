@@ -1,8 +1,8 @@
-package com.mber.topic.multithreading.alishev.lesson17_stream_creation;
+package com.mber.topic.multithreading.alishev.lesson17_thread_creation;
 
 // создание потоков
 
-import static com.mber.topic.multithreading.alishev.lesson17_stream_creation.Main.action;
+import static com.mber.topic.multithreading.alishev.lesson17_thread_creation.Main.action;
 
 public class Main {
     public static void main(String[] args) {

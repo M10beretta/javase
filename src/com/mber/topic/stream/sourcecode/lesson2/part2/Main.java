@@ -1,4 +1,4 @@
-package com.mber.topic.lambda.sourcecode.lesson2.part2;
+package com.mber.topic.stream.sourcecode.lesson2.part2;
 
 import java.util.Scanner;
 import java.util.function.*;

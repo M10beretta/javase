@@ -25,7 +25,7 @@ public class Main {
                 e.printStackTrace();
             }
             System.out.println(Thread.currentThread().getName() + " finished");
-            Random random= new Random();
+            Random random = new Random();
             int randomValue = random.nextInt(10);
             if (randomValue < 5) throw new Exception("Something bad happened");
             return random.nextInt(10);
@@ -36,7 +36,7 @@ public class Main {
             System.out.println(Thread.currentThread().getName() + " return " + result + "\n");
         } catch (InterruptedException e) {
             e.printStackTrace();
-        // обрабатываем перехваченое исключение ввыброшеннное нами в потоке
+            // обрабатываем перехваченное исключение выброшенное нами в потоке
         } catch (ExecutionException e) {
             Throwable ex = e.getCause();
             System.out.println(Thread.currentThread().getName() + " exception " + ex.getMessage() + "\n");
