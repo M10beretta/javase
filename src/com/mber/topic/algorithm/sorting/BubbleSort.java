@@ -10,9 +10,7 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         for (int i = 0; i < 30; i++) {
-            int[] arr = Arrays.stream(new int[10_000])
-                    .map(v -> v = new Random().nextInt(100))
-                    .toArray();
+            int[] arr = Arrays.stream(new int[10_000]).map(v -> v = new Random().nextInt(100)).toArray();
             long start = System.currentTimeMillis();
             bubbleSort(arr);
             System.out.println(System.currentTimeMillis() - start + " ms bubbleSort");

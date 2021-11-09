@@ -11,13 +11,9 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class QuickSort {
-
     public static void main(String[] args) {
         for (int i = 0; i < 30; i++) {
-            int[] arr = Arrays.stream(new int[100_000])
-                    .map(v -> v = new Random().nextInt(100))
-                    .toArray();
-
+            int[] arr = Arrays.stream(new int[100_000]).map(v -> v = new Random().nextInt(100)).toArray();
             long start = System.currentTimeMillis();
             quickSort(arr, 0, arr.length - 1);
             System.out.println(System.currentTimeMillis() - start + " ms quickSort");
