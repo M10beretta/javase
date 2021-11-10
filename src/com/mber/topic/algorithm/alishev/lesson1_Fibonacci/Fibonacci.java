@@ -25,13 +25,13 @@ public class Fibonacci {
         return fibNaive(n - 1) + fibNaive(n - 2);
     }
 
-    // n 1_000_000  быстрее в 30_000 раз
+    // n 1_000_000 быстрее в 30_000 раз
     // O(n)
     private static long fibEffective(int n) {
-        long[] arr = new long[n + 1]; //O(n)
+        long[] arr = new long[n + 1];
         arr[0] = 0; // O(1)
         arr[1] = 1; // O(1)
-        for (int i = 2; i <= n; i++) { //O(n)
+        for (int i = 2; i <= n; i++) { // O(n)
             arr[i] = arr[i - 1] + arr[i - 2];
         }
         return arr[n]; // O(1)
