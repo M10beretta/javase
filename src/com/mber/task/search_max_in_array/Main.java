@@ -1,4 +1,4 @@
-package com.mber.topic.core.task.search_max_in_array;
+package com.mber.task.search_max_in_array;
 
 import java.util.Arrays;
 

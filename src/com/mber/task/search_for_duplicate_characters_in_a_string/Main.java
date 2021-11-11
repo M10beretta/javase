@@ -1,4 +1,4 @@
-package com.mber.topic.core.task.search_for_duplicate_characters_in_a_string;
+package com.mber.task.search_for_duplicate_characters_in_a_string;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.mber.topic.core.task.swap_maximum_and_minimum_in_array;
+package com.mber.task.swap_maximum_and_minimum_in_array;
 
 import java.util.Arrays;
 
