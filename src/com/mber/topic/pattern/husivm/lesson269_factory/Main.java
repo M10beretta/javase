@@ -2,7 +2,7 @@ package com.mber.topic.pattern.husivm.lesson269_factory;
 
 // Factory
 
-public class FactoryLesson {
+public class Main {
     public static void main(String[] args) {
         Factory factory = new Factory();
         Car toyota = factory.create("Toyota");

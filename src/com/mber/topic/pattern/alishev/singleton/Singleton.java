@@ -1,7 +1,5 @@
 package com.mber.topic.pattern.alishev.singleton;
 
-// Neil Alishev
-
 public class Singleton {
     // В этой статической(!) переменной будет храниться единственный объект класса Singleton
     private static Singleton instance;
@@ -9,28 +7,22 @@ public class Singleton {
     // Скажем, что у нашего единственного объекта должно быть поле value
     private String value;
 
-    // Метод getter для поля value
-    public String getValue() {
-        return value;
-    }
-
     // ВАЖНО: Конструктор должен быть приватным
     // Мы не хотим, чтобы пользователь мог создавать новые объекты класса Singleton
     private Singleton(String value) {
         this.value = value;
     }
 
+    // Метод getter для поля value
+    public String getValue() {
+        return value;
+    }
+
     // Вот этот статический метод будет вызывать пользователь, чтобы получить объект класса Singleton
     public static Singleton getInstance(String value) {
-        // если ранее не был создан единственный объект
         if (instance == null) {
-            // код здесь выполняется только в момент первого вызова метода getInstance()
-
-            // создаем объект один раз
             instance = new Singleton(value);
         }
-
-        // все остальные вызовы метода getInstance() пользователю возвращается тот же самый объект
         return instance;
     }
 }

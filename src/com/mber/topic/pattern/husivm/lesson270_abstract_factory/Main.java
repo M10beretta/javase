@@ -2,20 +2,20 @@ package com.mber.topic.pattern.husivm.lesson270_abstract_factory;
 
 // Abstract Factory - фабрика фабрик
 
-public class AbstractFactoryLesson {
+public class Main {
     public static void main(String[] args) {
         Factory carFactory = new AbstractFactory().createFactory("CarFactory");
-        Factory tankFactory = new AbstractFactory().createFactory("TankFactory");
+        Factory tankFactory = new AbstractFactory().createFactory("MotoFactory");
 
         Car toyota = carFactory.createCar("Toyota");
         Car audi = carFactory.createCar("Audi");
-        Tank t1 = tankFactory.createTank("T1");
-        Tank t2 = tankFactory.createTank("T2");
+        Moto yamaha = tankFactory.createTank("Yamaha");
+        Moto suzuki = tankFactory.createTank("Suzuki");
 
         toyota.drive();
         audi.drive();
-        t1.drive();
-        t2.drive();
+        yamaha.drive();
+        suzuki.drive();
     }
 }
 
@@ -24,7 +24,7 @@ class AbstractFactory {
     Factory createFactory(String typeOfFactory) {
         return switch (typeOfFactory) {
             case "CarFactory" -> new CarFactory();
-            case "TankFactory" -> new TankFactory();
+            case "MotoFactory" -> new TankFactory();
             default -> null;
         };
     }
@@ -32,7 +32,7 @@ class AbstractFactory {
 
 interface Factory {
     Car createCar(String typeOfCar);
-    Tank createTank(String typeOfTank);
+    Moto createTank(String typeOfTank);
 }
 
 interface Car {
@@ -65,35 +65,35 @@ class CarFactory implements Factory {
     }
 
     @Override
-    public Tank createTank(String typeOfTank) {
+    public Moto createTank(String typeOfTank) {
         return null;
     }
 }
 
 
-interface Tank {
+interface Moto {
     void drive();
 }
 
-class T1 implements Tank {
+class Yamaha implements Moto {
     @Override
     public void drive() {
-        System.out.println("drive T1");
+        System.out.println("drive Yamaha");
     }
 }
 
-class T2 implements Tank {
+class Suzuki implements Moto {
     @Override
     public void drive() {
-        System.out.println("drive T2");
+        System.out.println("drive Suzuki");
     }
 }
 
 class TankFactory implements Factory {
-    public Tank createTank(String typeOfTank) {
+    public Moto createTank(String typeOfTank) {
         return switch (typeOfTank) {
-            case "T1" -> new T1();
-            case "T2" -> new T2();
+            case "Yamaha" -> new Yamaha();
+            case "Suzuki" -> new Suzuki();
             default -> null;
         };
     }

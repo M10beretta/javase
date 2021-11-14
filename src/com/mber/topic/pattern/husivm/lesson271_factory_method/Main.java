@@ -3,7 +3,7 @@ package com.mber.topic.pattern.husivm.lesson271_factory_method;
 // Factory Method
 // создание объекта через метод
 
-public class FactoryMethodLesson {
+public class Main {
     public static void main(String[] args) {
         Person.create();
     }
