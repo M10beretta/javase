@@ -1,6 +1,6 @@
 package com.mber.topic.pattern.husivm.lesson299_dao;
 
-// Pattern DAO
+// DAO
 
 public class Main {
     public static void main(String[] args) {
