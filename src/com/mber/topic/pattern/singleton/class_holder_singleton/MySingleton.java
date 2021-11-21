@@ -12,8 +12,8 @@ Class Holder Singleton
 что объект класса Singleton инициализируется без ошибок.
 Иначе первый вызов метода getInstance закончится ошибкой
 ExceptionInInitializerError, а все последующие NoClassDefFoundError.
+*/
 
- */
 public class MySingleton {
     private MySingleton(){
     }
@@ -25,5 +25,4 @@ public class MySingleton {
     public static MySingleton getInstance(){
         return SingletonHolder.HOLDER_INSTANCE;
     }
-
 }
